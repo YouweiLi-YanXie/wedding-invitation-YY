@@ -8,6 +8,7 @@ const letterPreview = document.querySelector('.letter-preview');
 openLetter.addEventListener('click', () => {
   if (opening) return;
   opening = true;
+  musicTrack.currentTime = 0;
   startMusic();
   openLetter.disabled = true;
   openLetter.setAttribute('aria-expanded', 'true');

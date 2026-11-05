@@ -59,15 +59,16 @@ document.getElementById('calendar').addEventListener('click', () => {
   toast('婚礼日历已生成；若微信限制下载，请在系统浏览器中打开。');
 });
 const musicTrack = document.getElementById('wedding-music');
-musicTrack.volume = .35;
+// The local audio includes the two-second fade and background listening level.
+musicTrack.volume = 1;
 let musicBusy = false;
 let musicWanted = false;
 function updateMusicState(playing) {
   const button = document.getElementById('music');
   button.setAttribute('aria-pressed', String(playing));
-  button.setAttribute('aria-label', playing ? '暂停 Love Story' : '播放 Love Story');
-  button.title = 'Love Story · Taylor Swift';
-  document.getElementById('music-label').textContent = playing ? 'Love Story' : '开启音乐';
+  button.setAttribute('aria-label', playing ? '暂停 A Thousand Years' : '播放 A Thousand Years');
+  button.title = 'A Thousand Years · 浅绯色的喵 · 钢琴与小提琴';
+  document.getElementById('music-label').textContent = playing ? '音乐播放中' : '开启音乐';
 }
 function stopMusic() {
   musicWanted = false;
