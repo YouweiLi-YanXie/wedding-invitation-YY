@@ -59,7 +59,7 @@ document.getElementById('calendar').addEventListener('click', () => {
   toast('婚礼日历已生成；若微信限制下载，请在系统浏览器中打开。');
 });
 const musicTrack = document.getElementById('wedding-music');
-// The local audio includes the two-second fade and background listening level.
+// Play the supplied original audio without fading or lowering its volume.
 musicTrack.volume = 1;
 let musicBusy = false;
 let musicWanted = false;
