@@ -6,6 +6,11 @@ const photoCollections = [
   {id:'wedding-portrait',title:'大婚肖像',english:'THE PORTRAITS',group:'婚纱照',description:'郑重定格，属于我们的模样。',photos:[]},
   {id:'oil-painting',title:'油画',english:'LOVE ON CANVAS',group:'婚纱照',description:'让爱意，落在温柔的光里。',photos:[]},
   {id:'castle',title:'城堡',english:'OUR FAIRYTALE',group:'婚纱照',description:'故事的这一页，刚好是我们。',photos:[]},
+  {id:'certificate',title:'领证',english:'OUR PROMISE',group:'人生的仪式',description:'从这一天起，我们有了共同的名字。',photos:Array.from({length:30},(_,index)=>({
+    src:`./assets/photos/certificate/certificate-${String(index+1).padStart(2,'0')}.webp`,
+    alt:`李有为与谢妍的领证纪念 · 第${index+1}张`,
+    caption:index===29?'把相伴的日子，写进我们的故事。':'把喜欢，写成余生。',
+  }))},
 ];
 
 const memoryCloud = document.getElementById('memory-cloud');
@@ -17,6 +22,8 @@ const photoNext = document.getElementById('gallery-next');
 const photoClose = document.getElementById('close-gallery');
 const photoCount = document.getElementById('gallery-count');
 const photoCaption = document.getElementById('gallery-caption');
+const photoFullscreen = document.getElementById('gallery-fullscreen');
+const photoViewHint = document.getElementById('gallery-view-hint');
 let activeCollection;
 let activePhoto = 0;
 let lastBubble;
@@ -161,6 +168,8 @@ function renderPhotoCollection() {
   photoDialog.dataset.collection = activeCollection.id;
   photoImage.hidden = !photo;
   photoEmpty.hidden = !!photo;
+  photoFullscreen.hidden = !photo;
+  photoViewHint.hidden = !photo;
   if (photo) {
     photoImage.src = photo.src;
     photoImage.alt = photo.alt || `${activeCollection.title} · 第${activePhoto+1}张照片`;
@@ -174,6 +183,15 @@ function renderPhotoCollection() {
   photoNext.disabled = !photo || activePhoto === photos.length-1;
 }
 
+function setGalleryFullscreen(expanded) {
+  expanded = !!expanded && !!activeCollection?.photos.length && photoDialog.open;
+  photoDialog.classList.toggle('is-fullscreen',expanded);
+  photoFullscreen.setAttribute('aria-pressed',String(expanded));
+  photoFullscreen.setAttribute('aria-label',expanded?'退出全屏查看':'全屏查看照片');
+  photoClose.setAttribute('aria-label',expanded?'退出全屏查看':'关闭相册');
+  photoViewHint.textContent = expanded?'再次双击，退出全屏':'双击照片，全屏查看';
+}
+
 function openPhotoCollection(id,bubble,fromKeyboard = false) {
   const collection = photoCollections.find(item => item.id === id);
   if (!collection) return;
@@ -185,25 +203,39 @@ function openPhotoCollection(id,bubble,fromKeyboard = false) {
   markMemoryHeart(bubble);
   document.body.classList.add('gallery-open');
   photoDialog.showModal();
+  setGalleryFullscreen(false);
   syncHeartMotion();
   photoClose.focus({preventScroll:true});
 }
 
 function moveCollectionPhoto(step) {
   if (!activeCollection?.photos.length) return;
+  lastPhotoTap = undefined;
   activePhoto = Math.max(0,Math.min(activeCollection.photos.length-1,activePhoto+step));
   renderPhotoCollection();
 }
 
 photoPrevious.addEventListener('click',() => moveCollectionPhoto(-1));
 photoNext.addEventListener('click',() => moveCollectionPhoto(1));
-photoClose.addEventListener('click',() => photoDialog.close());
+photoFullscreen.addEventListener('click',() => setGalleryFullscreen(!photoDialog.classList.contains('is-fullscreen')));
+photoClose.addEventListener('click',() => {
+  if (photoDialog.classList.contains('is-fullscreen')) {setGalleryFullscreen(false);photoFullscreen.focus();}
+  else photoDialog.close();
+});
 photoDialog.addEventListener('close',() => {
+  setGalleryFullscreen(false);
+  lastPhotoTap = undefined;
   document.body.classList.remove('gallery-open');
   lastBubble?.focus({preventScroll:true});
   // Restored focus can look keyboard-visible even after a touch or mouse click.
   heartFocused = lastBubbleWasKeyboard;
   syncHeartMotion();
+});
+photoDialog.addEventListener('cancel',event => {
+  if (!photoDialog.classList.contains('is-fullscreen')) return;
+  event.preventDefault();
+  setGalleryFullscreen(false);
+  photoFullscreen.focus();
 });
 photoDialog.addEventListener('keydown',event => {
   if (!['ArrowLeft','ArrowRight'].includes(event.key)) return;
@@ -215,15 +247,38 @@ photoDialog.addEventListener('click',event => {
   const bounds = photoDialog.getBoundingClientRect();
   if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) photoDialog.close();
 });
-let photoTouchX;
-document.getElementById('gallery-stage').addEventListener('touchstart',event => {photoTouchX=event.touches[0].clientX;},{passive:true});
-document.getElementById('gallery-stage').addEventListener('touchend',event => {
-  if (photoTouchX === undefined) return;
-  const distance = event.changedTouches[0].clientX-photoTouchX;
-  if (Math.abs(distance)>40) moveCollectionPhoto(distance<0?1:-1);
-  photoTouchX=undefined;
+let photoTouch;
+let lastPhotoTap;
+let lastTouchDoubleTap = -Infinity;
+photoImage.addEventListener('dblclick',event => {
+  // Do not also toggle the compatibility dblclick generated by a mobile double tap.
+  if (event.timeStamp-lastTouchDoubleTap<500) return;
+  event.preventDefault();
+  setGalleryFullscreen(!photoDialog.classList.contains('is-fullscreen'));
+});
+document.getElementById('gallery-stage').addEventListener('touchstart',event => {
+  if (event.touches.length!==1) {photoTouch=undefined;lastPhotoTap=undefined;return;}
+  photoTouch={x:event.touches[0].clientX,y:event.touches[0].clientY};
 },{passive:true});
-document.getElementById('gallery-stage').addEventListener('touchcancel',() => {photoTouchX=undefined;},{passive:true});
+document.getElementById('gallery-stage').addEventListener('touchend',event => {
+  if (!photoTouch) return;
+  const touch=event.changedTouches[0],dx=touch.clientX-photoTouch.x,dy=touch.clientY-photoTouch.y;
+  photoTouch=undefined;
+  if (Math.abs(dx)>40 && Math.abs(dx)>Math.abs(dy)) {
+    lastPhotoTap=undefined;
+    moveCollectionPhoto(dx<0?1:-1);
+    return;
+  }
+  if (Math.hypot(dx,dy)>12 || !activeCollection?.photos.length) {lastPhotoTap=undefined;return;}
+  const now=event.timeStamp;
+  if (lastPhotoTap && now-lastPhotoTap.time<320 && Math.hypot(touch.clientX-lastPhotoTap.x,touch.clientY-lastPhotoTap.y)<24) {
+    event.preventDefault();
+    lastTouchDoubleTap=now;
+    lastPhotoTap=undefined;
+    setGalleryFullscreen(!photoDialog.classList.contains('is-fullscreen'));
+  } else lastPhotoTap={time:now,x:touch.clientX,y:touch.clientY};
+},{passive:false});
+document.getElementById('gallery-stage').addEventListener('touchcancel',() => {photoTouch=undefined;lastPhotoTap=undefined;},{passive:true});
 
 memoryCloud.addEventListener('pointerdown',()=>{heartTouched=true;syncHeartMotion();});
 document.addEventListener('pointerup',()=>{heartTouched=false;syncHeartMotion();});
