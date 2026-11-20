@@ -64,7 +64,7 @@ musicTrack.volume = 1;
 let musicBusy = false;
 let musicWanted = false;
 let musicReady = false;
-let musicController;
+let musicPreparation;
 let musicObjectUrl;
 let musicResumeOnReturn = false;
 function updateMusicState(playing) {
@@ -77,16 +77,18 @@ function updateMusicState(playing) {
 function stopMusic(preserveResume = false) {
   if (!preserveResume) musicResumeOnReturn=false;
   musicWanted=false;
-  musicController?.abort();
   musicTrack.pause();
   updateMusicState(false);
 }
-async function prepareMusic() {
-  musicController=new AbortController();
-  let timer=setTimeout(()=>musicController?.abort(),30000);
-  document.getElementById('music-label').textContent='音乐准备中';
+function prepareMusic() {
+  if (musicReady) return Promise.resolve();
+  if (musicPreparation) return musicPreparation;
+  musicPreparation = (async()=>{
+  const controller=new AbortController();
+  let timer=setTimeout(()=>controller.abort(),30000);
+  if (musicTrack.paused) document.getElementById('music-label').textContent='音乐准备中';
   try {
-    const response=await fetchSavedMedia(musicTrack.dataset.src,{signal:musicController.signal});
+    const response=await fetchSavedMedia(musicTrack.dataset.src,{signal:controller.signal});
     if (!response.ok) throw new Error('Music download failed');
     let blob;
     if (response.body?.getReader) {
@@ -96,30 +98,37 @@ async function prepareMusic() {
       for (;;) {
         const {done,value}=await reader.read();
         if (done) break;
-        clearTimeout(timer);timer=setTimeout(()=>musicController?.abort(),30000);
+        clearTimeout(timer);timer=setTimeout(()=>controller.abort(),30000);
         parts.push(value);received+=value.byteLength;
-        if (total) document.getElementById('music-label').textContent='音乐准备 '+Math.min(100,Math.round(received/total*100))+'%';
+        if (total && musicTrack.paused) document.getElementById('music-label').textContent='音乐准备 '+Math.min(100,Math.round(received/total*100))+'%';
       }
       blob=new Blob(parts,{type:'audio/mp4'});
     } else blob=await response.blob();
-    if (!musicWanted) return;
     if (!blob.size) throw new Error('Empty music');
-    const position=musicTrack.currentTime || 0;
     musicObjectUrl=URL.createObjectURL(blob);
-    musicTrack.src=musicObjectUrl;
-    musicTrack.load();
-    musicTrack.currentTime=position;
     musicReady=true;
-  } finally {clearTimeout(timer);musicController=undefined;}
+    if (!musicWanted) updateMusicState(false);
+  } finally {clearTimeout(timer);}
+  })().finally(()=>{musicPreparation=undefined;});
+  return musicPreparation;
 }
 async function startMusic() {
   if (musicBusy || !musicTrack.paused) return;
   musicBusy=true;
   musicWanted=true;
   try {
-    if (!musicReady) await prepareMusic();
     if (!musicWanted || document.hidden) return;
-    await musicTrack.play();
+    const source=musicReady?musicObjectUrl:musicTrack.dataset.src;
+    if (musicTrack.getAttribute('src')!==source) {
+      const position=musicTrack.currentTime || 0;
+      musicTrack.src=source;
+      musicTrack.load();
+      musicTrack.currentTime=position;
+    }
+    // Call play in the click itself, even if the background download is unfinished.
+    const playback=musicTrack.play();
+    if (!musicReady) prepareMusic().catch(()=>{});
+    await playback;
     if (!musicWanted || document.hidden) {musicTrack.pause();return;}
     updateMusicState(true);
   } catch {

@@ -1,4 +1,10 @@
 'use strict';
+const letterCoverPhoto=document.querySelector('.letter-photo');
+const letterCoverImage=letterCoverPhoto?.querySelector('img');
+if (letterCoverImage) {
+  letterCoverPhoto.classList.toggle('is-image-loading',!letterCoverImage.complete);
+  for (const event of ['load','error']) letterCoverImage.addEventListener(event,()=>letterCoverPhoto.classList.remove('is-image-loading'));
+}
 const fittedCoverPage=document.getElementById('cover');
 const fittedCoverComposition=fittedCoverPage?.querySelector('.cover-composition');
 function fitCoverPage() {

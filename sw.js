@@ -1,16 +1,15 @@
 'use strict';
-const VERSION = '20261120-5';
+const VERSION = '20261120-7';
 const ROOT = self.registration.scope;
 const SHELL_PREFIX = 'yy-shell:' + ROOT + ':';
-const SHELL_CACHE = SHELL_PREFIX + VERSION + '-images2';
+const SHELL_CACHE = SHELL_PREFIX + VERSION;
 const MEDIA_CACHE = 'yy-media-v1:' + ROOT;
 const shell = ['./','./index.html','./cover-fit.css','./cover-fit.js','./style.css','./typography.css','./gallery.css','./intro.css',
   './app.js','./blessings.js','./interactions.js','./gallery.js','./media.js','./intro.js',
   './assets/fonts/PinyonScript-Regular.ttf','./assets/fonts/InvitationSong.woff2','./assets/fonts/LongCang-Names.woff2',
   './assets/monogram.svg','./assets/ribbon.svg','./assets/glass-heart.svg','./assets/heart-mask.svg',
   './assets/video/wedding-prelude-poster-small.webp'];
-const changedShell=new Set(['./gallery.js','./cover-fit.css','./cover-fit.js']);
-const versioned = shell.map(path=>/\.(?:css|js|ttf|woff2)$/.test(path)?path+'?v='+(changedShell.has(path)?'20261120-images2':VERSION):path);
+const versioned = shell.map(path=>/\.(?:css|js|ttf|woff2)$/.test(path)?path+'?v='+VERSION:path);
 self.addEventListener('install',event => event.waitUntil((async()=>{
   const cache=await caches.open(SHELL_CACHE);
   // An incomplete upgrade leaves the previous working version installed.
@@ -29,7 +28,7 @@ self.addEventListener('activate',event => event.waitUntil((async()=>{
 self.addEventListener('fetch',event => {
   const request=event.request,url=new URL(request.url);
   if (request.method!=='GET' || !url.href.startsWith(ROOT) || request.headers.has('range')) return;
-  const media=/\/assets\/photos\/.*\.webp$/.test(url.pathname) || url.pathname.endsWith('/assets/video/wedding-prelude-mobile.mp4') || url.pathname.endsWith('/assets/audio/a-thousand-years-mobile.m4a');
+  const media=/\/assets\/photos\/.*\.webp$/.test(url.pathname) || url.pathname.endsWith('/assets/video/wedding-prelude-mobile-lite.mp4') || url.pathname.endsWith('/assets/audio/a-thousand-years-mobile.m4a');
   const page=request.mode==='navigate' && (url.pathname===new URL(ROOT).pathname || url.pathname===new URL('index.html',ROOT).pathname);
   if (!media && !page && !/\.(?:css|js|svg|ttf|woff2|webp)$/.test(url.pathname)) return;
   event.respondWith((async()=>{
@@ -56,4 +55,3 @@ self.addEventListener('fetch',event => {
     return response;
   })());
 });
-

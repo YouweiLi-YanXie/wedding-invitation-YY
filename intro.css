@@ -33,44 +33,50 @@ body.entry-screen .film-footer{gap:8px}
 body.entry-screen #intro-status{font-size:9px;letter-spacing:.5px;line-height:1.6}
 body.entry-screen .film-signature{font-size:24px;margin-top:0}
 body.entry-screen .film-skip{font-size:10px}
-body.entry-screen .cover{--letter-lift:clamp(150px,30svh,240px);height:100%;min-height:0;max-height:100%;padding:18px 20px max(12px,env(safe-area-inset-bottom))}
+body.entry-screen .cover{--envelope-height:clamp(142px,44vw,175px);height:100%;min-height:0;max-height:100%;padding:18px 20px max(16px,env(safe-area-inset-bottom))}
 body.entry-screen .cover-top{font-size:5px;letter-spacing:1.3px}
 body.entry-screen .cover-heading{margin-top:clamp(14px,6svh,50px)}
 body.entry-screen .cover h1{font-size:29px;letter-spacing:3px;line-height:1.65;margin:14px 0 10px}
 body.entry-screen .cover-heading>p{font-size:10px}
 body.entry-screen .cover-heading .eyebrow{font-size:6px;letter-spacing:1.7px}
-body.entry-screen .envelope{height:clamp(125px,22svh,175px);margin-top:clamp(20px,4svh,40px);margin-bottom:13px}
+body.entry-screen .envelope{height:var(--envelope-height);flex-shrink:0;margin-top:clamp(20px,4svh,40px);margin-bottom:13px}
 body.entry-screen .cover-hint{font-size:9px;letter-spacing:1px}
 body.entry-screen .cover-date{font-size:7px;padding-top:12px}
 body.entry-screen .cover-date .cover-lunar{font-size:9px;margin-top:4px}
 body.entry-screen .cover.unsealing .cover-heading{margin-top:8px}
 body.entry-screen .cover.unsealing h1{font-size:18px;line-height:1.4;letter-spacing:1px;margin:6px 0}
-body.entry-screen .cover.unsealing .envelope{margin-top:calc(var(--letter-lift) + 25px);height:clamp(110px,20svh,155px);margin-bottom:10px}
-body.entry-screen .cover.unsealing .letter-peek{height:calc(var(--letter-lift) + 120px);transform:translateY(calc(-1 * var(--letter-lift)));padding-top:5px}
-body.entry-screen .cover.unsealing .letter-peek>.brand-mark{width:25px;height:25px;margin-top:0}
+/* Size the paper and envelope together so the portrait and dates stay above the pocket. */
+body.entry-screen .cover.unsealing .envelope{flex:1;min-height:0;max-height:490px;height:auto;margin:16px 0 10px;container-type:size}
+body.entry-screen .cover.unsealing .envelope-back,body.entry-screen .cover.unsealing .envelope-front,body.entry-screen .cover.unsealing .envelope-flap{top:auto;bottom:0;height:var(--envelope-height)}
+body.entry-screen .cover.unsealing .letter-peek{top:0;height:calc(100% - 14px);transform:none;padding-top:8px;animation:letter-rise .95s ease both}
+body.entry-screen .cover.unsealing .letter-peek>.brand-mark{width:22px;height:22px;margin-top:0;flex-shrink:0}
 body.entry-screen .cover.unsealing .letter-peek>small{font-size:5px;margin-top:0}
 body.entry-screen .cover.unsealing .letter-names{font-size:22px;line-height:1.3;margin-top:4px}
-body.entry-screen .cover.unsealing .letter-photo{width:clamp(84px,16svh,120px);margin:6px auto}
+body.entry-screen .cover.unsealing .letter-photo{--photo-height:clamp(64px,calc(100cqh - var(--envelope-height) - 110px),190px);height:var(--photo-height);width:calc(var(--photo-height) * .8);margin:6px auto}
+body.entry-screen .cover.unsealing .letter-photo>img{object-fit:contain}
 body.entry-screen .cover.unsealing .letter-date{font-size:9px;line-height:1.4}
 body.entry-screen .cover.unsealing .letter-lunar{font-size:8px;line-height:1.5}
-body.entry-screen .cover.unsealing .cover-hint{display:none}
-body.entry-screen .cover.unsealing .wax-seal{transform:translateY(25px) scale(.7)}
+body.entry-screen .cover.unsealing .cover-hint{display:block;margin:0;font-size:9px;line-height:1.8}
+body.entry-screen .cover.unsealing .wax-seal{top:auto;bottom:18px;transform:scale(.78)}
 body.entry-screen .enter-invitation{min-height:44px;padding:9px 20px;font-size:11px;letter-spacing:1px;margin-top:4px;flex-shrink:0}
-body.entry-screen .cover.unsealing .cover-date{margin-top:auto;padding-top:8px}
+body.entry-screen .cover.unsealing .cover-date{margin-top:10px;padding-top:0}
+@keyframes letter-rise{from{transform:translateY(65px);opacity:.4}to{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){body.entry-screen .cover.unsealing .letter-peek{animation:none}}
 @media(max-height:520px){
 body.entry-screen .film-intro{gap:8px;padding:10px 6%}.film-heading>img,body.entry-screen .film-dedication,body.entry-screen .film-signature{display:none}
 body.entry-screen .film-heading h1{font-size:27px;margin:4px 0}body.entry-screen .film-heading h1>span{font-size:25px}
 body.entry-screen .film-player{max-width:330px;width:100%;align-self:center}.film-caption{display:none}
-body.entry-screen .cover{--letter-lift:110px;padding:8px 18px}
-body.entry-screen .cover-top,body.entry-screen .cover-date,body.entry-screen .cover-heading>p{display:none}
+body.entry-screen .cover{--envelope-height:clamp(142px,46vw,160px);padding:8px 18px}
+body.entry-screen .cover-top{display:none}
 body.entry-screen .cover-heading,body.entry-screen .cover.unsealing .cover-heading{margin-top:0}
 body.entry-screen .cover h1{font-size:22px;margin:5px 0;line-height:1.4}
-body.entry-screen .envelope{height:100px;margin-top:20px}
+body.entry-screen .envelope{margin-top:20px}
 body.entry-screen .cover.unsealing h1{font-size:16px;line-height:1.2;margin:3px 0}
-body.entry-screen .cover.unsealing .envelope{margin-top:130px;height:85px;margin-bottom:6px}
-body.entry-screen .cover.unsealing .letter-peek{height:200px}
-body.entry-screen .cover.unsealing .letter-photo{width:64px;margin:3px auto}
+body.entry-screen .cover.unsealing .envelope{margin:12px 0 6px}
+body.entry-screen .cover.unsealing .letter-photo{--photo-height:clamp(50px,calc(100cqh - var(--envelope-height) - 96px),110px);margin:3px auto}
 body.entry-screen .cover.unsealing .letter-names{font-size:18px}
-body.entry-screen .cover.unsealing .letter-peek>.brand-mark{height:18px;width:18px}
-body.entry-screen .cover.unsealing .wax-seal{transform:translateY(28px) scale(.65)}
+body.entry-screen .cover.unsealing .letter-peek{padding-top:6px}
+body.entry-screen .cover.unsealing .letter-peek>small{display:none}
+body.entry-screen .cover.unsealing .letter-peek>.brand-mark{height:16px;width:16px}
+body.entry-screen .cover.unsealing .wax-seal{bottom:10px;transform:scale(.65)}
 }
