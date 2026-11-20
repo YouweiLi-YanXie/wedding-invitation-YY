@@ -2,14 +2,15 @@
 const VERSION = '20261120-5';
 const ROOT = self.registration.scope;
 const SHELL_PREFIX = 'yy-shell:' + ROOT + ':';
-const SHELL_CACHE = SHELL_PREFIX + VERSION;
+const SHELL_CACHE = SHELL_PREFIX + VERSION + '-images2';
 const MEDIA_CACHE = 'yy-media-v1:' + ROOT;
-const shell = ['./','./index.html','./style.css','./typography.css','./gallery.css','./intro.css',
+const shell = ['./','./index.html','./cover-fit.css','./cover-fit.js','./style.css','./typography.css','./gallery.css','./intro.css',
   './app.js','./blessings.js','./interactions.js','./gallery.js','./media.js','./intro.js',
   './assets/fonts/PinyonScript-Regular.ttf','./assets/fonts/InvitationSong.woff2','./assets/fonts/LongCang-Names.woff2',
   './assets/monogram.svg','./assets/ribbon.svg','./assets/glass-heart.svg','./assets/heart-mask.svg',
   './assets/video/wedding-prelude-poster-small.webp'];
-const versioned = shell.map(path=>/\.(?:css|js|ttf|woff2)$/.test(path)?path+'?v='+VERSION:path);
+const changedShell=new Set(['./gallery.js','./cover-fit.css','./cover-fit.js']);
+const versioned = shell.map(path=>/\.(?:css|js|ttf|woff2)$/.test(path)?path+'?v='+(changedShell.has(path)?'20261120-images2':VERSION):path);
 self.addEventListener('install',event => event.waitUntil((async()=>{
   const cache=await caches.open(SHELL_CACHE);
   // An incomplete upgrade leaves the previous working version installed.
@@ -55,3 +56,4 @@ self.addEventListener('fetch',event => {
     return response;
   })());
 });
+

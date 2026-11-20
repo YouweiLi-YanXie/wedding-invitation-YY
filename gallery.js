@@ -9,56 +9,56 @@ const photoCollections = [
     "description": "一方园林，一起入画。",
     "photos": [
       {
-        "src": "./assets/photos/garden-01-mobile.webp?v=664de6bcc16c",
-        "preview": "./assets/photos/garden-01-preview.webp?v=5be99e54293a",
+        "src": "./assets/photos/garden-01-mobile.webp?v=65084a8902f6",
+        "preview": "./assets/photos/garden-01-preview.webp?v=fb82b4332f46",
         "alt": "李有为与谢妍 · 苏式园林 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-02-mobile.webp?v=5707756c43c4",
-        "preview": "./assets/photos/garden-02-preview.webp?v=4570b3d80dfa",
+        "src": "./assets/photos/garden-02-mobile.webp?v=bd6500b1ad67",
+        "preview": "./assets/photos/garden-02-preview.webp?v=bd19223b4907",
         "alt": "李有为与谢妍 · 苏式园林 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-03-mobile.webp?v=a115773ef09c",
-        "preview": "./assets/photos/garden-03-preview.webp?v=de1ebfda2c22",
+        "src": "./assets/photos/garden-03-mobile.webp?v=4a141f187317",
+        "preview": "./assets/photos/garden-03-preview.webp?v=9a844e1af7e2",
         "alt": "李有为与谢妍 · 苏式园林 · 第3张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-04-mobile.webp?v=2584f09dc81b",
-        "preview": "./assets/photos/garden-04-preview.webp?v=4ab9706290e1",
+        "src": "./assets/photos/garden-04-mobile.webp?v=7eb92756f86c",
+        "preview": "./assets/photos/garden-04-preview.webp?v=ff842f49e295",
         "alt": "李有为与谢妍 · 苏式园林 · 第4张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-05-mobile.webp?v=0ab3090bd8f7",
-        "preview": "./assets/photos/garden-05-preview.webp?v=d87a67aa6e10",
+        "src": "./assets/photos/garden-05-mobile.webp?v=64d9e438866a",
+        "preview": "./assets/photos/garden-05-preview.webp?v=3257fcbd3860",
         "alt": "李有为与谢妍 · 苏式园林 · 第5张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-06-mobile.webp?v=683619050129",
-        "preview": "./assets/photos/garden-06-preview.webp?v=1e94cbd83dfb",
+        "src": "./assets/photos/garden-06-mobile.webp?v=e0b2cda463bc",
+        "preview": "./assets/photos/garden-06-preview.webp?v=650ec6c34ee4",
         "alt": "李有为与谢妍 · 苏式园林 · 第6张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-07-mobile.webp?v=06f35fb54aa0",
-        "preview": "./assets/photos/garden-07-preview.webp?v=794d5369d578",
+        "src": "./assets/photos/garden-07-mobile.webp?v=184ce4922d31",
+        "preview": "./assets/photos/garden-07-preview.webp?v=5906e3396226",
         "alt": "李有为与谢妍 · 苏式园林 · 第7张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-08-mobile.webp?v=27b64aabf004",
-        "preview": "./assets/photos/garden-08-preview.webp?v=4ee6767cf146",
+        "src": "./assets/photos/garden-08-mobile.webp?v=284349cc613a",
+        "preview": "./assets/photos/garden-08-preview.webp?v=6edcb0b3060a",
         "alt": "李有为与谢妍 · 苏式园林 · 第8张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-09-mobile.webp?v=aa91d99dce41",
-        "preview": "./assets/photos/garden-09-preview.webp?v=2f79ff410293",
+        "src": "./assets/photos/garden-09-mobile.webp?v=a0b1448bc607",
+        "preview": "./assets/photos/garden-09-preview.webp?v=12beed57686c",
         "alt": "李有为与谢妍 · 苏式园林 · 第9张",
         "caption": "以爱为名，与你共赴。"
       }
@@ -72,14 +72,14 @@ const photoCollections = [
     "description": "把相逢，写进古意里。",
     "photos": [
       {
-        "src": "./assets/photos/tang-01-mobile.webp?v=a70794c067b6",
-        "preview": "./assets/photos/tang-01-preview.webp?v=0faa35e1123d",
+        "src": "./assets/photos/tang-01-mobile.webp?v=d703130a89e7",
+        "preview": "./assets/photos/tang-01-preview.webp?v=afe0594a71d1",
         "alt": "李有为与谢妍 · 盛唐大婚 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/tang-02-mobile.webp?v=343b8a5b63ef",
-        "preview": "./assets/photos/tang-02-preview.webp?v=d00d38316da9",
+        "src": "./assets/photos/tang-02-mobile.webp?v=0bc6ef8d15c5",
+        "preview": "./assets/photos/tang-02-preview.webp?v=10da2de77314",
         "alt": "李有为与谢妍 · 盛唐大婚 · 第2张",
         "caption": "以爱为名，与你共赴。"
       }
@@ -93,62 +93,62 @@ const photoCollections = [
     "description": "郑重定格，属于我们的模样。",
     "photos": [
       {
-        "src": "./assets/photos/wedding-portrait-01-mobile.webp?v=d77ad6e8f6a1",
-        "preview": "./assets/photos/wedding-portrait-01-preview.webp?v=fce014ec19a8",
+        "src": "./assets/photos/wedding-portrait-01-mobile.webp?v=606ddff9fa1b",
+        "preview": "./assets/photos/wedding-portrait-01-preview.webp?v=ad9cf29e7ead",
         "alt": "李有为与谢妍 · 西式大婚 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-02-mobile.webp?v=b6b009004c1c",
-        "preview": "./assets/photos/wedding-portrait-02-preview.webp?v=d8be6d867b5d",
+        "src": "./assets/photos/wedding-portrait-02-mobile.webp?v=49175242e45c",
+        "preview": "./assets/photos/wedding-portrait-02-preview.webp?v=49d36abe0ae5",
         "alt": "李有为与谢妍 · 西式大婚 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-03-mobile.webp?v=7734810fd1a3",
-        "preview": "./assets/photos/wedding-portrait-03-preview.webp?v=7aa04e3349fc",
+        "src": "./assets/photos/wedding-portrait-03-mobile.webp?v=cc5fdaaf4998",
+        "preview": "./assets/photos/wedding-portrait-03-preview.webp?v=5eb69951a649",
         "alt": "李有为与谢妍 · 西式大婚 · 第3张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-04-mobile.webp?v=a49ee184e744",
-        "preview": "./assets/photos/wedding-portrait-04-preview.webp?v=4b69add8cf1c",
+        "src": "./assets/photos/wedding-portrait-04-mobile.webp?v=3ef72998ccd5",
+        "preview": "./assets/photos/wedding-portrait-04-preview.webp?v=e77f30c94fb7",
         "alt": "李有为与谢妍 · 西式大婚 · 第4张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-05-mobile.webp?v=783ddcec27a4",
-        "preview": "./assets/photos/wedding-portrait-05-preview.webp?v=765f54442210",
+        "src": "./assets/photos/wedding-portrait-05-mobile.webp?v=eaf34f737e5e",
+        "preview": "./assets/photos/wedding-portrait-05-preview.webp?v=542bc17d9fe6",
         "alt": "李有为与谢妍 · 西式大婚 · 第5张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-06-mobile.webp?v=2a051525fc46",
-        "preview": "./assets/photos/wedding-portrait-06-preview.webp?v=a7ba70d8d77d",
+        "src": "./assets/photos/wedding-portrait-06-mobile.webp?v=2398dca227eb",
+        "preview": "./assets/photos/wedding-portrait-06-preview.webp?v=1d9172f5244b",
         "alt": "李有为与谢妍 · 西式大婚 · 第6张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-07-mobile.webp?v=d4ab41090240",
-        "preview": "./assets/photos/wedding-portrait-07-preview.webp?v=97242869bb8c",
+        "src": "./assets/photos/wedding-portrait-07-mobile.webp?v=912cfefb38a8",
+        "preview": "./assets/photos/wedding-portrait-07-preview.webp?v=395e60870311",
         "alt": "李有为与谢妍 · 西式大婚 · 第7张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-08-mobile.webp?v=dbdb9009e621",
-        "preview": "./assets/photos/wedding-portrait-08-preview.webp?v=096e1969a827",
+        "src": "./assets/photos/wedding-portrait-08-mobile.webp?v=818585bf0619",
+        "preview": "./assets/photos/wedding-portrait-08-preview.webp?v=c630dddf3b12",
         "alt": "李有为与谢妍 · 西式大婚 · 第8张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-09-mobile.webp?v=99474a03a507",
-        "preview": "./assets/photos/wedding-portrait-09-preview.webp?v=7ec2bf96268b",
+        "src": "./assets/photos/wedding-portrait-09-mobile.webp?v=8c3f83250248",
+        "preview": "./assets/photos/wedding-portrait-09-preview.webp?v=ff8e16e053a9",
         "alt": "李有为与谢妍 · 西式大婚 · 第9张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-10-mobile.webp?v=92a17d80071f",
-        "preview": "./assets/photos/wedding-portrait-10-preview.webp?v=e85fe268757a",
+        "src": "./assets/photos/wedding-portrait-10-mobile.webp?v=977be7b790f6",
+        "preview": "./assets/photos/wedding-portrait-10-preview.webp?v=9980440b2d21",
         "alt": "李有为与谢妍 · 西式大婚 · 第10张",
         "caption": "以爱为名，与你共赴。"
       }
@@ -162,50 +162,50 @@ const photoCollections = [
     "description": "让爱意，落在温柔的光里。",
     "photos": [
       {
-        "src": "./assets/photos/oil-painting-01-mobile.webp?v=b14e4d7f5c3d",
-        "preview": "./assets/photos/oil-painting-01-preview.webp?v=70800ea2f488",
+        "src": "./assets/photos/oil-painting-01-mobile.webp?v=cdb2d3dace69",
+        "preview": "./assets/photos/oil-painting-01-preview.webp?v=a40362e0c96e",
         "alt": "李有为与谢妍 · 复古油画 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-02-mobile.webp?v=5ffc1b10032c",
-        "preview": "./assets/photos/oil-painting-02-preview.webp?v=3b5bd5b059e8",
+        "src": "./assets/photos/oil-painting-02-mobile.webp?v=5be3b6c237ba",
+        "preview": "./assets/photos/oil-painting-02-preview.webp?v=e4aba1a4c899",
         "alt": "李有为与谢妍 · 复古油画 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-03-mobile.webp?v=965e6285ebd6",
-        "preview": "./assets/photos/oil-painting-03-preview.webp?v=56324fad1370",
+        "src": "./assets/photos/oil-painting-03-mobile.webp?v=d6d0f6595c6b",
+        "preview": "./assets/photos/oil-painting-03-preview.webp?v=11a34ccae623",
         "alt": "李有为与谢妍 · 复古油画 · 第3张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-04-mobile.webp?v=32c06d59877f",
-        "preview": "./assets/photos/oil-painting-04-preview.webp?v=348dbeb92704",
+        "src": "./assets/photos/oil-painting-04-mobile.webp?v=416bfbce28bf",
+        "preview": "./assets/photos/oil-painting-04-preview.webp?v=d47a4ed8dcad",
         "alt": "李有为与谢妍 · 复古油画 · 第4张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-05-mobile.webp?v=c05ccbac7d26",
-        "preview": "./assets/photos/oil-painting-05-preview.webp?v=271354dbf19c",
+        "src": "./assets/photos/oil-painting-05-mobile.webp?v=9cd9513f6747",
+        "preview": "./assets/photos/oil-painting-05-preview.webp?v=d9c572685118",
         "alt": "李有为与谢妍 · 复古油画 · 第5张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-06-mobile.webp?v=38a04e52cf1b",
-        "preview": "./assets/photos/oil-painting-06-preview.webp?v=00512fc31eda",
+        "src": "./assets/photos/oil-painting-06-mobile.webp?v=d51cb1f66eaa",
+        "preview": "./assets/photos/oil-painting-06-preview.webp?v=332b69de8567",
         "alt": "李有为与谢妍 · 复古油画 · 第6张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-07-mobile.webp?v=60f99c45d332",
-        "preview": "./assets/photos/oil-painting-07-preview.webp?v=7f868c0ed436",
+        "src": "./assets/photos/oil-painting-07-mobile.webp?v=c17d1f377a81",
+        "preview": "./assets/photos/oil-painting-07-preview.webp?v=1b4cdd68b5d8",
         "alt": "李有为与谢妍 · 复古油画 · 第7张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-08-mobile.webp?v=f0e7cfc51929",
-        "preview": "./assets/photos/oil-painting-08-preview.webp?v=1fb2af3a9d3c",
+        "src": "./assets/photos/oil-painting-08-mobile.webp?v=9cb04d84bd40",
+        "preview": "./assets/photos/oil-painting-08-preview.webp?v=3436c1a8dbb6",
         "alt": "李有为与谢妍 · 复古油画 · 第8张",
         "caption": "以爱为名，与你共赴。"
       }
@@ -219,20 +219,20 @@ const photoCollections = [
     "description": "故事的这一页，刚好是我们。",
     "photos": [
       {
-        "src": "./assets/photos/castle-01-mobile.webp?v=e2f8efa26dd7",
-        "preview": "./assets/photos/castle-01-preview.webp?v=91774d5817aa",
+        "src": "./assets/photos/castle-01-mobile.webp?v=37e35251c004",
+        "preview": "./assets/photos/castle-01-preview.webp?v=033c7dfb2bad",
         "alt": "李有为与谢妍 · 世纪城堡 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/castle-02-mobile.webp?v=856acd69376f",
-        "preview": "./assets/photos/castle-02-preview.webp?v=5ef78c864807",
+        "src": "./assets/photos/castle-02-mobile.webp?v=43f7cb86d5d3",
+        "preview": "./assets/photos/castle-02-preview.webp?v=6bb35b904fdd",
         "alt": "李有为与谢妍 · 世纪城堡 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/castle-03-mobile.webp?v=5e168b280c07",
-        "preview": "./assets/photos/castle-03-preview.webp?v=da33046796dc",
+        "src": "./assets/photos/castle-03-mobile.webp?v=0290023e7b8f",
+        "preview": "./assets/photos/castle-03-preview.webp?v=3487ddf621c6",
         "alt": "李有为与谢妍 · 世纪城堡 · 第3张",
         "caption": "以爱为名，与你共赴。"
       }
@@ -246,182 +246,182 @@ const photoCollections = [
     "description": "从这一天起，我们有了共同的名字。",
     "photos": [
       {
-        "src": "./assets/photos/certificate/certificate-01-mobile.webp?v=28a59a57ce55",
-        "preview": "./assets/photos/certificate/certificate-01-preview.webp?v=1bf15219d2e2",
+        "src": "./assets/photos/certificate/certificate-01-mobile.webp?v=a5cd0ce517ef",
+        "preview": "./assets/photos/certificate/certificate-01-preview.webp?v=84f1aa1613e0",
         "alt": "李有为与谢妍 · 领证 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-02-mobile.webp?v=039bf71316fa",
-        "preview": "./assets/photos/certificate/certificate-02-preview.webp?v=912842726541",
+        "src": "./assets/photos/certificate/certificate-02-mobile.webp?v=b84c5e9fbd8a",
+        "preview": "./assets/photos/certificate/certificate-02-preview.webp?v=698ab0472181",
         "alt": "李有为与谢妍 · 领证 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-03-mobile.webp?v=45a6d0dd9f55",
-        "preview": "./assets/photos/certificate/certificate-03-preview.webp?v=11db2dbc8068",
+        "src": "./assets/photos/certificate/certificate-03-mobile.webp?v=51ec3f1e3edf",
+        "preview": "./assets/photos/certificate/certificate-03-preview.webp?v=9b547646bc07",
         "alt": "李有为与谢妍 · 领证 · 第3张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-04-mobile.webp?v=5a54fb967950",
-        "preview": "./assets/photos/certificate/certificate-04-preview.webp?v=49196e4c6e23",
+        "src": "./assets/photos/certificate/certificate-04-mobile.webp?v=1e9d0b79c6ea",
+        "preview": "./assets/photos/certificate/certificate-04-preview.webp?v=b3eca5ee9e6f",
         "alt": "李有为与谢妍 · 领证 · 第4张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-05-mobile.webp?v=977fb73ecf88",
-        "preview": "./assets/photos/certificate/certificate-05-preview.webp?v=851a32947c4d",
+        "src": "./assets/photos/certificate/certificate-05-mobile.webp?v=8bf5778b6780",
+        "preview": "./assets/photos/certificate/certificate-05-preview.webp?v=08108db4ac58",
         "alt": "李有为与谢妍 · 领证 · 第5张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-06-mobile.webp?v=f36e135fef31",
-        "preview": "./assets/photos/certificate/certificate-06-preview.webp?v=1c40952e7b0f",
+        "src": "./assets/photos/certificate/certificate-06-mobile.webp?v=151d2309039b",
+        "preview": "./assets/photos/certificate/certificate-06-preview.webp?v=91143cb93991",
         "alt": "李有为与谢妍 · 领证 · 第6张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-07-mobile.webp?v=f3308c17270a",
-        "preview": "./assets/photos/certificate/certificate-07-preview.webp?v=a6c615ad9171",
+        "src": "./assets/photos/certificate/certificate-07-mobile.webp?v=fbf9b28e185a",
+        "preview": "./assets/photos/certificate/certificate-07-preview.webp?v=f32c0ff9125f",
         "alt": "李有为与谢妍 · 领证 · 第7张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-08-mobile.webp?v=0aaf780f39a7",
-        "preview": "./assets/photos/certificate/certificate-08-preview.webp?v=45f4c8b89b08",
+        "src": "./assets/photos/certificate/certificate-08-mobile.webp?v=5eaef941514d",
+        "preview": "./assets/photos/certificate/certificate-08-preview.webp?v=2632ab7a9348",
         "alt": "李有为与谢妍 · 领证 · 第8张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-09-mobile.webp?v=586dece2ab78",
-        "preview": "./assets/photos/certificate/certificate-09-preview.webp?v=98fa112c1740",
+        "src": "./assets/photos/certificate/certificate-09-mobile.webp?v=e0e0d95fc22a",
+        "preview": "./assets/photos/certificate/certificate-09-preview.webp?v=8c4040933dcd",
         "alt": "李有为与谢妍 · 领证 · 第9张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-10-mobile.webp?v=4d564d733ab8",
-        "preview": "./assets/photos/certificate/certificate-10-preview.webp?v=c5fe28a1535b",
+        "src": "./assets/photos/certificate/certificate-10-mobile.webp?v=63a584cb7a95",
+        "preview": "./assets/photos/certificate/certificate-10-preview.webp?v=e136c8d224b5",
         "alt": "李有为与谢妍 · 领证 · 第10张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-11-mobile.webp?v=7e87a5edfa6b",
-        "preview": "./assets/photos/certificate/certificate-11-preview.webp?v=91b3f0bf512e",
+        "src": "./assets/photos/certificate/certificate-11-mobile.webp?v=4c0e7ffd5f8d",
+        "preview": "./assets/photos/certificate/certificate-11-preview.webp?v=82aedd71c34f",
         "alt": "李有为与谢妍 · 领证 · 第11张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-12-mobile.webp?v=d470c84d6328",
-        "preview": "./assets/photos/certificate/certificate-12-preview.webp?v=7eb87b83a4ce",
+        "src": "./assets/photos/certificate/certificate-12-mobile.webp?v=d2b67e2db2e1",
+        "preview": "./assets/photos/certificate/certificate-12-preview.webp?v=85e7366d35c5",
         "alt": "李有为与谢妍 · 领证 · 第12张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-13-mobile.webp?v=dca0d0553a81",
-        "preview": "./assets/photos/certificate/certificate-13-preview.webp?v=037cc41e87b8",
+        "src": "./assets/photos/certificate/certificate-13-mobile.webp?v=e9faae6ecc6b",
+        "preview": "./assets/photos/certificate/certificate-13-preview.webp?v=65fe584e0eb8",
         "alt": "李有为与谢妍 · 领证 · 第13张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-14-mobile.webp?v=d320a8bc8ce5",
-        "preview": "./assets/photos/certificate/certificate-14-preview.webp?v=21015abb438a",
+        "src": "./assets/photos/certificate/certificate-14-mobile.webp?v=970c9adef7a1",
+        "preview": "./assets/photos/certificate/certificate-14-preview.webp?v=d8158dbbb853",
         "alt": "李有为与谢妍 · 领证 · 第14张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-15-mobile.webp?v=56626db07ffe",
-        "preview": "./assets/photos/certificate/certificate-15-preview.webp?v=4842657358d1",
+        "src": "./assets/photos/certificate/certificate-15-mobile.webp?v=47c8a803a6ee",
+        "preview": "./assets/photos/certificate/certificate-15-preview.webp?v=b862bc39e2b6",
         "alt": "李有为与谢妍 · 领证 · 第15张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-16-mobile.webp?v=36b82cc13001",
-        "preview": "./assets/photos/certificate/certificate-16-preview.webp?v=93067e409ae7",
+        "src": "./assets/photos/certificate/certificate-16-mobile.webp?v=f50a4dc056fe",
+        "preview": "./assets/photos/certificate/certificate-16-preview.webp?v=0c89da4fae14",
         "alt": "李有为与谢妍 · 领证 · 第16张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-17-mobile.webp?v=acc6e6a2a315",
-        "preview": "./assets/photos/certificate/certificate-17-preview.webp?v=3c56935bf7c8",
+        "src": "./assets/photos/certificate/certificate-17-mobile.webp?v=c85b5cea0b43",
+        "preview": "./assets/photos/certificate/certificate-17-preview.webp?v=ad6089f20da3",
         "alt": "李有为与谢妍 · 领证 · 第17张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-18-mobile.webp?v=0da943496aac",
-        "preview": "./assets/photos/certificate/certificate-18-preview.webp?v=0ad7d9d2c334",
+        "src": "./assets/photos/certificate/certificate-18-mobile.webp?v=03309699943a",
+        "preview": "./assets/photos/certificate/certificate-18-preview.webp?v=f6d9468f3e5e",
         "alt": "李有为与谢妍 · 领证 · 第18张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-19-mobile.webp?v=235cdf5f9128",
-        "preview": "./assets/photos/certificate/certificate-19-preview.webp?v=55f0324aad39",
+        "src": "./assets/photos/certificate/certificate-19-mobile.webp?v=6feae2aeb326",
+        "preview": "./assets/photos/certificate/certificate-19-preview.webp?v=7809cc527117",
         "alt": "李有为与谢妍 · 领证 · 第19张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-20-mobile.webp?v=b12047eebee2",
-        "preview": "./assets/photos/certificate/certificate-20-preview.webp?v=a46aa128db88",
+        "src": "./assets/photos/certificate/certificate-20-mobile.webp?v=ed86dddfcbd0",
+        "preview": "./assets/photos/certificate/certificate-20-preview.webp?v=3c99d645f9e6",
         "alt": "李有为与谢妍 · 领证 · 第20张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-21-mobile.webp?v=3c73e5dd5c15",
-        "preview": "./assets/photos/certificate/certificate-21-preview.webp?v=9260b3861163",
+        "src": "./assets/photos/certificate/certificate-21-mobile.webp?v=77d2ec0d128c",
+        "preview": "./assets/photos/certificate/certificate-21-preview.webp?v=db60f8922919",
         "alt": "李有为与谢妍 · 领证 · 第21张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-22-mobile.webp?v=f6776f1c3235",
-        "preview": "./assets/photos/certificate/certificate-22-preview.webp?v=80021239a6ed",
+        "src": "./assets/photos/certificate/certificate-22-mobile.webp?v=af0a0c6c6aac",
+        "preview": "./assets/photos/certificate/certificate-22-preview.webp?v=7f230b92ecbf",
         "alt": "李有为与谢妍 · 领证 · 第22张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-23-mobile.webp?v=5558396b7ee8",
-        "preview": "./assets/photos/certificate/certificate-23-preview.webp?v=36fc0cfa9381",
+        "src": "./assets/photos/certificate/certificate-23-mobile.webp?v=23022b052fde",
+        "preview": "./assets/photos/certificate/certificate-23-preview.webp?v=9005f1e3864b",
         "alt": "李有为与谢妍 · 领证 · 第23张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-24-mobile.webp?v=e41ba8def224",
-        "preview": "./assets/photos/certificate/certificate-24-preview.webp?v=4daa950b7859",
+        "src": "./assets/photos/certificate/certificate-24-mobile.webp?v=4dff86cd33f0",
+        "preview": "./assets/photos/certificate/certificate-24-preview.webp?v=4db7ab80306a",
         "alt": "李有为与谢妍 · 领证 · 第24张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-25-mobile.webp?v=4c7343584abf",
-        "preview": "./assets/photos/certificate/certificate-25-preview.webp?v=88c1c3d8cbd6",
+        "src": "./assets/photos/certificate/certificate-25-mobile.webp?v=2e556efad6ec",
+        "preview": "./assets/photos/certificate/certificate-25-preview.webp?v=42d71e7596df",
         "alt": "李有为与谢妍 · 领证 · 第25张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-26-mobile.webp?v=9e71862651be",
-        "preview": "./assets/photos/certificate/certificate-26-preview.webp?v=d1b07366f291",
+        "src": "./assets/photos/certificate/certificate-26-mobile.webp?v=302a99d6d0ae",
+        "preview": "./assets/photos/certificate/certificate-26-preview.webp?v=41b97e87f57f",
         "alt": "李有为与谢妍 · 领证 · 第26张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-27-mobile.webp?v=9b61666b2384",
-        "preview": "./assets/photos/certificate/certificate-27-preview.webp?v=281512e8a938",
+        "src": "./assets/photos/certificate/certificate-27-mobile.webp?v=7aab84e30fa3",
+        "preview": "./assets/photos/certificate/certificate-27-preview.webp?v=989f85c6ec1b",
         "alt": "李有为与谢妍 · 领证 · 第27张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-28-mobile.webp?v=895dc5e985eb",
-        "preview": "./assets/photos/certificate/certificate-28-preview.webp?v=13d97bcdd54b",
+        "src": "./assets/photos/certificate/certificate-28-mobile.webp?v=9b5c7ea8bced",
+        "preview": "./assets/photos/certificate/certificate-28-preview.webp?v=476f861fe1ac",
         "alt": "李有为与谢妍 · 领证 · 第28张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-29-mobile.webp?v=b514424e142f",
-        "preview": "./assets/photos/certificate/certificate-29-preview.webp?v=573756e38196",
+        "src": "./assets/photos/certificate/certificate-29-mobile.webp?v=07ac010a0ea7",
+        "preview": "./assets/photos/certificate/certificate-29-preview.webp?v=549d50cb2919",
         "alt": "李有为与谢妍 · 领证 · 第29张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-30-mobile.webp?v=58c1a75355c6",
-        "preview": "./assets/photos/certificate/certificate-30-preview.webp?v=ce182620ea8e",
+        "src": "./assets/photos/certificate/certificate-30-mobile.webp?v=053c98004b0e",
+        "preview": "./assets/photos/certificate/certificate-30-preview.webp?v=bec1f4a949e9",
         "alt": "李有为与谢妍 · 领证 · 第30张",
         "caption": "把相伴的日子，写进我们的故事。"
       }
@@ -725,3 +725,4 @@ if ('ResizeObserver' in window) new ResizeObserver(sizeMemoryHearts).observe(mem
 else window.addEventListener('resize',sizeMemoryHearts);
 if ('IntersectionObserver' in window) new IntersectionObserver(entries=>{heartVisible=entries[0].isIntersecting;syncHeartMotion();},{threshold:0}).observe(memoryField);
 sizeMemoryHearts();
+
