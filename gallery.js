@@ -1,9 +1,6 @@
 'use strict';
 // Add {src, alt, caption} entries to a collection when the photos are ready.
 const photoCollections = [
-  {id:'daily',title:'日常',english:'EVERYDAY',group:'我们的生活',description:'把普通的一天，记成喜欢的一天。',photos:[]},
-  {id:'engagement',title:'订婚',english:'ENGAGEMENT',group:'人生的仪式',description:'认真约定，慢慢相伴。',photos:[]},
-  {id:'certificate',title:'领证',english:'OUR PROMISE',group:'人生的仪式',description:'从这一天起，我们有了共同的名字。',photos:[]},
   {id:'garden',title:'园林',english:'IN THE GARDEN',group:'婚纱照',description:'一方园林，一起入画。',photos:[]},
   {id:'tang',title:'唐服',english:'TIMELESS LOVE',group:'婚纱照',description:'把相逢，写进古意里。',photos:[]},
   {id:'wedding-portrait',title:'大婚肖像',english:'THE PORTRAITS',group:'婚纱照',description:'郑重定格，属于我们的模样。',photos:[]},
