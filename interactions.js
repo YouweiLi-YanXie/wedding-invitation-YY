@@ -19,12 +19,14 @@ openLetter.addEventListener('click', () => {
   enterInvitation.focus({preventScroll:true});
 });
 enterInvitation.addEventListener('click', () => {
+  document.body.classList.remove('entry-screen');
   cover.hidden = true;
   invitation.hidden = false;
   invitation.focus({preventScroll:true});
   window.scrollTo({top:0,behavior:'auto'});
 });
 document.getElementById('replay').addEventListener('click', () => {
+  document.body.classList.add('entry-screen');
   stopMusic();
   invitation.hidden = true;
   cover.hidden = false;
