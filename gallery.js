@@ -189,7 +189,8 @@ const photoCollections = [
         "alt": "李有为与谢妍 · 大婚肖像 · 第30张",
         "caption": "以爱为名，与你共赴。"
       }
-    ]
+    ],
+    "date": "2027年01月30日"
   },
   {
     "id": "certificate",
@@ -200,134 +201,134 @@ const photoCollections = [
     "cover": "./assets/photos/certificate-cover.webp?v=0b8f1bc9801c",
     "photos": [
       {
-        "src": "./assets/photos/certificate/certificate-07-mobile.webp?v=b09583732f96",
-        "preview": "./assets/photos/certificate/certificate-07-preview.webp?v=f32c0ff9125f",
+        "src": "./assets/photos/certificate/certificate-11-mobile.webp?v=dd9cd278fe8d",
+        "preview": "./assets/photos/certificate/certificate-11-preview.webp?v=82aedd71c34f",
         "alt": "李有为与谢妍 · 领证全记 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-12-mobile.webp?v=9ed90bc0e8cc",
-        "preview": "./assets/photos/certificate/certificate-12-preview.webp?v=85e7366d35c5",
+        "src": "./assets/photos/certificate-b1462dd3ea45-mobile.webp?v=e18204ce2309",
+        "preview": "./assets/photos/certificate-b1462dd3ea45-preview.webp?v=2343db10f334",
         "alt": "李有为与谢妍 · 领证全记 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-02-mobile.webp?v=7bfdd8438939",
-        "preview": "./assets/photos/certificate/certificate-02-preview.webp?v=698ab0472181",
+        "src": "./assets/photos/certificate/certificate-07-mobile.webp?v=b09583732f96",
+        "preview": "./assets/photos/certificate/certificate-07-preview.webp?v=f32c0ff9125f",
         "alt": "李有为与谢妍 · 领证全记 · 第3张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-21-mobile.webp?v=6556edb68596",
-        "preview": "./assets/photos/certificate/certificate-21-preview.webp?v=db60f8922919",
+        "src": "./assets/photos/certificate-a6fffee45030-mobile.webp?v=34eeee4164b0",
+        "preview": "./assets/photos/certificate-a6fffee45030-preview.webp?v=46317b509ab7",
         "alt": "李有为与谢妍 · 领证全记 · 第4张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-16-mobile.webp?v=ded2b542a3ba",
-        "preview": "./assets/photos/certificate/certificate-16-preview.webp?v=0c89da4fae14",
+        "src": "./assets/photos/certificate-5282a5bddb27-mobile.webp?v=d800abfcfea9",
+        "preview": "./assets/photos/certificate-5282a5bddb27-preview.webp?v=055b5466e979",
         "alt": "李有为与谢妍 · 领证全记 · 第5张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate-9e66226446ad-mobile.webp?v=d5c7342c4788",
+        "preview": "./assets/photos/certificate-9e66226446ad-preview.webp?v=1c170f734fad",
+        "alt": "李有为与谢妍 · 领证全记 · 第6张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-08-mobile.webp?v=20e345b30b94",
+        "preview": "./assets/photos/certificate/certificate-08-preview.webp?v=2632ab7a9348",
+        "alt": "李有为与谢妍 · 领证全记 · 第7张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate-1c54471fc3f2-mobile.webp?v=02ede14d8f6b",
+        "preview": "./assets/photos/certificate-1c54471fc3f2-preview.webp?v=49e855ba9a2d",
+        "alt": "李有为与谢妍 · 领证全记 · 第8张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/certificate/certificate-29-mobile.webp?v=95547474f2e1",
         "preview": "./assets/photos/certificate/certificate-29-preview.webp?v=549d50cb2919",
-        "alt": "李有为与谢妍 · 领证全记 · 第6张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-20-mobile.webp?v=68f70853f782",
-        "preview": "./assets/photos/certificate/certificate-20-preview.webp?v=3c99d645f9e6",
-        "alt": "李有为与谢妍 · 领证全记 · 第7张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-15-mobile.webp?v=67575d8eb14a",
-        "preview": "./assets/photos/certificate/certificate-15-preview.webp?v=b862bc39e2b6",
-        "alt": "李有为与谢妍 · 领证全记 · 第8张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-23-mobile.webp?v=fee064945bc6",
-        "preview": "./assets/photos/certificate/certificate-23-preview.webp?v=9005f1e3864b",
         "alt": "李有为与谢妍 · 领证全记 · 第9张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-24-mobile.webp?v=a8620515a928",
-        "preview": "./assets/photos/certificate/certificate-24-preview.webp?v=4db7ab80306a",
-        "alt": "李有为与谢妍 · 领证全记 · 第10张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-19-mobile.webp?v=386481da6e02",
-        "preview": "./assets/photos/certificate/certificate-19-preview.webp?v=7809cc527117",
-        "alt": "李有为与谢妍 · 领证全记 · 第11张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-25-mobile.webp?v=c2cdd06b0722",
-        "preview": "./assets/photos/certificate/certificate-25-preview.webp?v=42d71e7596df",
-        "alt": "李有为与谢妍 · 领证全记 · 第12张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-04-mobile.webp?v=a214a878768b",
-        "preview": "./assets/photos/certificate/certificate-04-preview.webp?v=b3eca5ee9e6f",
-        "alt": "李有为与谢妍 · 领证全记 · 第13张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-27-mobile.webp?v=f8044c15c3ec",
-        "preview": "./assets/photos/certificate/certificate-27-preview.webp?v=989f85c6ec1b",
-        "alt": "李有为与谢妍 · 领证全记 · 第14张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-11-mobile.webp?v=dd9cd278fe8d",
-        "preview": "./assets/photos/certificate/certificate-11-preview.webp?v=82aedd71c34f",
-        "alt": "李有为与谢妍 · 领证全记 · 第15张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-26-mobile.webp?v=ab9664960134",
-        "preview": "./assets/photos/certificate/certificate-26-preview.webp?v=41b97e87f57f",
-        "alt": "李有为与谢妍 · 领证全记 · 第16张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-22-mobile.webp?v=5d66f1ab3d1b",
-        "preview": "./assets/photos/certificate/certificate-22-preview.webp?v=7f230b92ecbf",
-        "alt": "李有为与谢妍 · 领证全记 · 第17张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/certificate/certificate-06-mobile.webp?v=c2cf2b355118",
         "preview": "./assets/photos/certificate/certificate-06-preview.webp?v=91143cb93991",
-        "alt": "李有为与谢妍 · 领证全记 · 第18张",
+        "alt": "李有为与谢妍 · 领证全记 · 第10张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/certificate/certificate-01-mobile.webp?v=2a89d7829c12",
         "preview": "./assets/photos/certificate/certificate-01-preview.webp?v=84f1aa1613e0",
-        "alt": "李有为与谢妍 · 领证全记 · 第19张",
+        "alt": "李有为与谢妍 · 领证全记 · 第11张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-30-mobile.webp?v=5ff87f381236",
-        "preview": "./assets/photos/certificate/certificate-30-preview.webp?v=bec1f4a949e9",
-        "alt": "李有为与谢妍 · 领证全记 · 第20张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/certificate/certificate-03-mobile.webp?v=54a30776f0f4",
-        "preview": "./assets/photos/certificate/certificate-03-preview.webp?v=9b547646bc07",
-        "alt": "李有为与谢妍 · 领证全记 · 第21张",
+        "src": "./assets/photos/certificate/certificate-04-mobile.webp?v=a214a878768b",
+        "preview": "./assets/photos/certificate/certificate-04-preview.webp?v=b3eca5ee9e6f",
+        "alt": "李有为与谢妍 · 领证全记 · 第12张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/certificate/certificate-05-mobile.webp?v=af481864747c",
         "preview": "./assets/photos/certificate/certificate-05-preview.webp?v=08108db4ac58",
+        "alt": "李有为与谢妍 · 领证全记 · 第13张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-02-mobile.webp?v=7bfdd8438939",
+        "preview": "./assets/photos/certificate/certificate-02-preview.webp?v=698ab0472181",
+        "alt": "李有为与谢妍 · 领证全记 · 第14张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate-e56c4418900f-mobile.webp?v=c1ac7c27a707",
+        "preview": "./assets/photos/certificate-e56c4418900f-preview.webp?v=2d108b2e43ad",
+        "alt": "李有为与谢妍 · 领证全记 · 第15张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-25-mobile.webp?v=c2cdd06b0722",
+        "preview": "./assets/photos/certificate/certificate-25-preview.webp?v=42d71e7596df",
+        "alt": "李有为与谢妍 · 领证全记 · 第16张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate-30795256fde6-mobile.webp?v=f7e255ead7d9",
+        "preview": "./assets/photos/certificate-30795256fde6-preview.webp?v=240eecb7663d",
+        "alt": "李有为与谢妍 · 领证全记 · 第17张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-20-mobile.webp?v=68f70853f782",
+        "preview": "./assets/photos/certificate/certificate-20-preview.webp?v=3c99d645f9e6",
+        "alt": "李有为与谢妍 · 领证全记 · 第18张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-19-mobile.webp?v=386481da6e02",
+        "preview": "./assets/photos/certificate/certificate-19-preview.webp?v=7809cc527117",
+        "alt": "李有为与谢妍 · 领证全记 · 第19张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-26-mobile.webp?v=ab9664960134",
+        "preview": "./assets/photos/certificate/certificate-26-preview.webp?v=41b97e87f57f",
+        "alt": "李有为与谢妍 · 领证全记 · 第20张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate-d58152345465-mobile.webp?v=05dac39dd7af",
+        "preview": "./assets/photos/certificate-d58152345465-preview.webp?v=6932b0470879",
+        "alt": "李有为与谢妍 · 领证全记 · 第21张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-16-mobile.webp?v=ded2b542a3ba",
+        "preview": "./assets/photos/certificate/certificate-16-preview.webp?v=0c89da4fae14",
         "alt": "李有为与谢妍 · 领证全记 · 第22张",
         "caption": "以爱为名，与你共赴。"
       },
@@ -338,8 +339,8 @@ const photoCollections = [
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-08-mobile.webp?v=20e345b30b94",
-        "preview": "./assets/photos/certificate/certificate-08-preview.webp?v=2632ab7a9348",
+        "src": "./assets/photos/certificate/certificate-21-mobile.webp?v=6556edb68596",
+        "preview": "./assets/photos/certificate/certificate-21-preview.webp?v=db60f8922919",
         "alt": "李有为与谢妍 · 领证全记 · 第24张",
         "caption": "以爱为名，与你共赴。"
       },
@@ -350,36 +351,49 @@ const photoCollections = [
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-28-mobile.webp?v=2bde3322a29c",
-        "preview": "./assets/photos/certificate/certificate-28-preview.webp?v=476f861fe1ac",
+        "src": "./assets/photos/certificate/certificate-23-mobile.webp?v=fee064945bc6",
+        "preview": "./assets/photos/certificate/certificate-23-preview.webp?v=9005f1e3864b",
         "alt": "李有为与谢妍 · 领证全记 · 第26张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-09-mobile.webp?v=e922639d72e6",
-        "preview": "./assets/photos/certificate/certificate-09-preview.webp?v=8c4040933dcd",
+        "src": "./assets/photos/certificate/certificate-24-mobile.webp?v=a8620515a928",
+        "preview": "./assets/photos/certificate/certificate-24-preview.webp?v=4db7ab80306a",
         "alt": "李有为与谢妍 · 领证全记 · 第27张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-13-mobile.webp?v=d2eff2b1d366",
-        "preview": "./assets/photos/certificate/certificate-13-preview.webp?v=65fe584e0eb8",
+        "src": "./assets/photos/certificate/certificate-22-mobile.webp?v=5d66f1ab3d1b",
+        "preview": "./assets/photos/certificate/certificate-22-preview.webp?v=7f230b92ecbf",
         "alt": "李有为与谢妍 · 领证全记 · 第28张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-10-mobile.webp?v=04fb5b772952",
-        "preview": "./assets/photos/certificate/certificate-10-preview.webp?v=e136c8d224b5",
+        "src": "./assets/photos/certificate-49339a2717df-mobile.webp?v=a30b7909450b",
+        "preview": "./assets/photos/certificate-49339a2717df-preview.webp?v=5882820dbea8",
         "alt": "李有为与谢妍 · 领证全记 · 第29张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-14-mobile.webp?v=905216de3114",
-        "preview": "./assets/photos/certificate/certificate-14-preview.webp?v=d8158dbbb853",
+        "src": "./assets/photos/certificate-99655cd45783-mobile.webp?v=3c4bbc60ea27",
+        "preview": "./assets/photos/certificate-99655cd45783-preview.webp?v=4b4a7a240b94",
         "alt": "李有为与谢妍 · 领证全记 · 第30张",
-        "caption": "把相伴的日子，写进我们的故事。"
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate-039025a35931-mobile.webp?v=a0adb0933586",
+        "preview": "./assets/photos/certificate-039025a35931-preview.webp?v=21d2b3325cc1",
+        "alt": "李有为与谢妍 · 领证全记 · 第31张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/certificate/certificate-30-mobile.webp?v=5ff87f381236",
+        "preview": "./assets/photos/certificate/certificate-30-preview.webp?v=bec1f4a949e9",
+        "alt": "李有为与谢妍 · 领证全记 · 第32张",
+        "caption": "以爱为名，与你共赴。"
       }
-    ]
+    ],
+    "date": "2026年11月18日"
   }
 ];
 
@@ -398,12 +412,22 @@ const photoOutgoing = document.getElementById('gallery-outgoing');
 const photoStatus = document.getElementById('gallery-status');
 const photoRetry = document.getElementById('gallery-retry');
 const photoLoading = document.getElementById('gallery-loading');
+const photoLeaf = document.getElementById('gallery-leaf');
+const photoLeafImage = document.getElementById('gallery-leaf-photo');
+const photoCurlCanvas = document.getElementById('gallery-curl-canvas');
+let photoCurlAnimation;
+const openingCover = document.getElementById('gallery-opening-cover');
+let albumOpening = false;
+let photoTurning = false;
+let pendingPhotoTurn;
+let photoTurnTimer;
 let galleryScrollTop = 0;
 let nextPhotoPrefetch;
 let activeCollection;
 let activePhoto = 0;
 let lastAlbumButton;
 const albumButtons = new Map();
+const albumCoupleNames = '李有为 & 谢妍';
 let seenCollections = [];
 try {
   const saved = JSON.parse(localStorage.getItem('wedding-gallery-seen') || '[]');
@@ -429,12 +453,15 @@ photoCollections.forEach(collection => {
   const title = document.createElement('span');
   title.className = 'album-book-title';
   title.textContent = collection.title;
-  const english = document.createElement('span');
-  english.className = 'album-book-english';
-  english.textContent = collection.english;
+  const date = document.createElement('span');
+  date.className = 'album-book-date';
+  date.textContent = collection.date;
+  const names = document.createElement('span');
+  names.className = 'album-book-names';
+  names.textContent = albumCoupleNames;
   const meta = document.createElement('span');
   meta.className = 'album-book-meta';
-  inner.append(cover,title,english,meta);
+  inner.append(cover,title,date,names,meta);
   button.append(inner);
   button.addEventListener('click',() => openPhotoCollection(collection.id,button));
   albumButtons.set(collection.id,{button,meta,collection});
@@ -460,13 +487,12 @@ function markAlbumViewed(button) {
 function renderPhotoCollection(direction = 0) {
   const photos = activeCollection.photos;
   const photo = photos[activePhoto];
-  const animate = direction && photoStage.classList.contains('is-photo-ready') && !reducedPhotoMotion.matches;
+  const visibleSource = photoStage.classList.contains('is-photo-ready') ? photoImage.currentSrc || photoImage.src : pendingPhotoTurn?.source;
+  const animate = direction && visibleSource && !reducedPhotoMotion.matches;
+  finishPhotoTurn();
+  pendingPhotoTurn = animate ? {direction,source:visibleSource} : undefined;
   photoOutgoing.hidden = !animate;
-  photoStage.classList.remove('is-turning');
-  if (animate) {
-    photoOutgoing.src = photoImage.currentSrc || photoImage.src;
-    photoStage.dataset.turn = direction>0?'next':'previous';
-  } else photoOutgoing.removeAttribute('src');
+  if (animate) photoOutgoing.src = visibleSource;
   document.getElementById('gallery-title').textContent = activeCollection.title;
   document.getElementById('gallery-group').textContent = activeCollection.group+' / '+activeCollection.english;
   document.getElementById('gallery-description').textContent = activeCollection.description;
@@ -495,18 +521,26 @@ function renderPhotoCollection(direction = 0) {
   }
   photoCount.textContent = photo ? String(activePhoto+1).padStart(2,'0')+' / '+String(photos.length).padStart(2,'0') : '照片待续';
   photoCaption.textContent = photo ? (photo.caption || activeCollection.title) : '这一册，先为我们的故事留白。';
-  photoPrevious.disabled = photos.length < 2;
-  photoNext.disabled = photos.length < 2;
-  if (animate) {
-    void photoStage.offsetWidth;
-    photoStage.classList.add('is-turning');
-  }
+  syncGalleryControls();
 }
-photoOutgoing.addEventListener('animationend',() => {
+function syncGalleryControls() {
+  const disabled = !activeCollection || activeCollection.photos.length<2 || albumOpening || photoTurning;
+  photoPrevious.disabled = disabled;
+  photoNext.disabled = disabled;
+}
+function finishPhotoTurn() {
+  photoCurlAnimation?.cancel();
+  photoCurlAnimation = undefined;
+  clearTimeout(photoTurnTimer);
+  photoTurning = false;
+  pendingPhotoTurn = undefined;
+  photoLeaf.hidden = true;
+  photoLeafImage.removeAttribute('src');
   photoOutgoing.hidden = true;
   photoOutgoing.removeAttribute('src');
   photoStage.classList.remove('is-turning');
-});
+  syncGalleryControls();
+}
 photoImage.addEventListener('load',() => {
   if (!photoDialog.open || !activeCollection?.photos.length) return;
   photoImage.hidden = false;
@@ -514,8 +548,23 @@ photoImage.addEventListener('load',() => {
   photoStage.setAttribute('aria-busy','false');
   photoStage.classList.remove('is-photo-loading');
   photoStage.classList.add('is-photo-ready');
-  photoStatus.textContent = '左右轻扫，翻看照片';
+  photoStatus.textContent = albumOpening ? '' : '左右轻扫，翻看照片';
   photoRetry.hidden = true;
+  if (pendingPhotoTurn) {
+    const {direction,source} = pendingPhotoTurn;
+    pendingPhotoTurn = undefined;
+    photoTurning = true;
+    photoStage.dataset.turn = direction>0?'next':'previous';
+    photoLeafImage.src = direction>0 ? source : photoImage.currentSrc || photoImage.src;
+    photoLeaf.hidden = false;
+    photoOutgoing.hidden = direction>0;
+    void photoLeaf.offsetWidth;
+    photoStage.classList.add('is-turning');
+    syncGalleryControls();
+    photoCurlAnimation = startAlbumPageCurl(photoCurlCanvas,direction>0?photoOutgoing:photoImage,direction,finishPhotoTurn);
+    if(photoCurlAnimation)photoTurnTimer = setTimeout(finishPhotoTurn,1300);
+    else finishPhotoTurn();
+  }
   const next = activeCollection.photos.length > 1 ? activeCollection.photos[(activePhoto+1)%activeCollection.photos.length] : undefined;
   // Only warm one adjacent photo after the visible photo finishes loading.
   if (next && typeof Image !== 'undefined') {
@@ -538,6 +587,20 @@ photoRetry.addEventListener('click',() => {
   renderPhotoCollection();
   photoImage.src += (photoImage.src.includes('?')?'&':'?')+'retry='+Date.now();
 });
+function finishAlbumOpening() {
+  albumOpening = false;
+  openingCover.hidden = true;
+  photoDialog.classList.remove('is-book-opening');
+  photoDialog.classList.remove('is-cover-preview');
+  const photos = activeCollection?.photos || [];
+  if (photos.length) {
+    photoCount.textContent = String(activePhoto+1).padStart(2,'0')+' / '+String(photos.length).padStart(2,'0');
+    photoCaption.textContent = photos[activePhoto].caption || activeCollection.title;
+    photoStatus.textContent = photoStage.classList.contains('is-photo-ready') ? '左右轻扫，翻看照片' : (photoRetry.hidden ? '照片准备中…' : '网络有些慢，轻触重试');
+  }
+  syncGalleryControls();
+}
+openingCover.addEventListener('click',finishAlbumOpening);
 function openPhotoCollection(id,button) {
   const collection = photoCollections.find(item => item.id === id);
   if (!collection || photoDialog.open) return;
@@ -551,10 +614,32 @@ function openPhotoCollection(id,button) {
   document.body.style.top = '-'+galleryScrollTop+'px';
   document.body.classList.add('gallery-open');
   photoDialog.showModal();
+  if (collection.photos.length) {
+    if (!reducedPhotoMotion.matches && button) {
+      const from = button.getBoundingClientRect(),to = photoDialog.getBoundingClientRect();
+      photoDialog.style.setProperty('--book-from-x',(from.left+from.width/2-to.left-to.width/2)+'px');
+      photoDialog.style.setProperty('--book-from-y',(from.top+from.height/2-to.top-to.height/2)+'px');
+      photoDialog.style.setProperty('--book-from-scale',String(Math.min(from.width/to.width,from.height/to.height)));
+      photoDialog.classList.add('is-book-opening');
+    }
+    photoDialog.dataset.book = collection.id;
+    document.getElementById('gallery-opening-image').src = collection.cover;
+    document.getElementById('gallery-opening-title').textContent = collection.title;
+    document.getElementById('gallery-opening-date').textContent = collection.date;
+    document.getElementById('gallery-opening-names').textContent = albumCoupleNames;
+    openingCover.hidden = false;
+    openingCover.setAttribute('aria-label','打开'+collection.title+'，查看照片');
+    albumOpening = true;
+    photoDialog.classList.add('is-cover-preview');
+    photoCount.textContent = collection.photos.length+' 张照片';
+    photoCaption.textContent = '';
+    photoStatus.textContent = '';
+    syncGalleryControls();
+  }
   photoClose.focus({preventScroll:true});
 }
 function moveCollectionPhoto(step) {
-  if (!activeCollection?.photos.length) return;
+  if (!activeCollection?.photos.length || albumOpening || photoTurning) return;
   const count = activeCollection.photos.length;
   const next = ((activePhoto+step)%count+count)%count;
   if (next === activePhoto) return;
@@ -565,6 +650,8 @@ photoPrevious.addEventListener('click',() => moveCollectionPhoto(-1));
 photoNext.addEventListener('click',() => moveCollectionPhoto(1));
 photoClose.addEventListener('click',() => photoDialog.close());
 photoDialog.addEventListener('close',() => {
+  finishAlbumOpening();
+  finishPhotoTurn();
   photoTouch = undefined;
   nextPhotoPrefetch?.removeAttribute('src');
   nextPhotoPrefetch = undefined;
@@ -579,6 +666,10 @@ photoDialog.addEventListener('close',() => {
   window.scrollTo({top:galleryScrollTop,behavior:'instant'});
   lastAlbumButton?.classList.remove('is-opening');
   lastAlbumButton?.focus({preventScroll:true});
+});
+window.addEventListener('resize',() => {
+  if (albumOpening) photoDialog.classList.remove('is-book-opening');
+  if (photoTurning) finishPhotoTurn();
 });
 // Only the close button dismisses this fixed album page.
 photoDialog.addEventListener('cancel',event => event.preventDefault());

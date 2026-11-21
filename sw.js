@@ -1,11 +1,11 @@
 'use strict';
-const VERSION = '20261121-1';
+const VERSION = '20261121-10';
 const ROOT = self.registration.scope;
 const SHELL_PREFIX = 'yy-shell:' + ROOT + ':';
 const SHELL_CACHE = SHELL_PREFIX + VERSION;
 const MEDIA_CACHE = 'yy-media-v1:' + ROOT;
 const shell = ['./','./index.html','./cover-fit.css','./cover-fit.js','./style.css','./typography.css','./gallery.css','./intro.css',
-  './app.js','./blessings.js','./interactions.js','./gallery.js','./media.js','./intro.js',
+  './app.js','./blessings.js','./interactions.js','./gallery.js','./page-curl.js','./media.js','./intro.js',
   './assets/fonts/PinyonScript-Regular.ttf','./assets/fonts/InvitationSong.woff2','./assets/fonts/LongCang-Names.woff2',
   './assets/monogram.svg','./assets/ribbon.svg',
   './assets/video/wedding-prelude-poster-small.webp'];
