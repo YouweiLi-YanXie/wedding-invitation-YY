@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261121-10';
+const VERSION = '20261121-11';
 const ROOT = self.registration.scope;
 const SHELL_PREFIX = 'yy-shell:' + ROOT + ':';
 const SHELL_CACHE = SHELL_PREFIX + VERSION;
@@ -27,24 +27,45 @@ self.addEventListener('activate',event => event.waitUntil((async()=>{
 })()));
 self.addEventListener('fetch',event => {
   const request=event.request,url=new URL(request.url);
-  if (request.method!=='GET' || !url.href.startsWith(ROOT) || request.headers.has('range')) return;
+  if (request.method!=='GET' || !url.href.startsWith(ROOT)) return;
   const media=/\/assets\/photos\/.*\.webp$/.test(url.pathname) || url.pathname.endsWith('/assets/video/wedding-prelude-mobile-lite.mp4') || url.pathname.endsWith('/assets/audio/a-thousand-years-mobile.m4a');
   const page=request.mode==='navigate' && (url.pathname===new URL(ROOT).pathname || url.pathname===new URL('index.html',ROOT).pathname);
+  const range=request.headers.get('range');
+  if (range && !media) return;
   if (!media && !page && !/\.(?:css|js|svg|ttf|woff2|webp)$/.test(url.pathname)) return;
   event.respondWith((async()=>{
     const key=page?ROOT:request;
     let cache;
     try {
       cache=await caches.open(media?MEDIA_CACHE:SHELL_CACHE);
-      const saved=await cache.match(key);
-      if (saved) return saved;
+      const saved=await cache.match(range?request.url:key);
+      if (saved) {
+        if (!range) return saved;
+        const match=/^bytes=(\d*)-(\d*)$/.exec(range);
+        if (!match || (!match[1] && !match[2])) return fetch(request);
+        const blob=await saved.blob(),size=blob.size;
+        const start=match[1]?Number(match[1]):Math.max(0,size-Number(match[2]));
+        const end=match[1] && match[2]?Math.min(Number(match[2]),size-1):size-1;
+        if (start>=size || end<start) return new Response(null,{status:416,headers:{'Content-Range':'bytes */'+size}});
+        const headers=new Headers(saved.headers);
+        headers.set('Content-Range',`bytes ${start}-${end}/${size}`);
+        headers.set('Content-Length',String(end-start+1));
+        headers.set('Accept-Ranges','bytes');
+        return new Response(blob.slice(start,end+1),{status:206,headers});
+      }
     } catch {return fetch(request);}
     const response=await fetch(request);
-    if (response.status===200) {
-      const copy=response.clone();
+    const fullRange=/^bytes 0-(\d+)\/(\d+)$/.exec(response.headers.get('Content-Range') || '');
+    if (response.status===200 || (response.status===206 && fullRange && Number(fullRange[1])+1===Number(fullRange[2]))) {
+      let copy=response.clone();
       event.waitUntil((async()=>{
         try {
-          await cache.put(key,copy);
+          if (copy.status===206) {
+            const headers=new Headers(copy.headers);
+            headers.delete('Content-Range');
+            copy=new Response(await copy.blob(),{status:200,headers});
+          }
+          await cache.put(range?request.url:key,copy);
           if (media) {
             const keys=await cache.keys();
             for (const old of keys.slice(0,Math.max(0,keys.length-256))) await cache.delete(old);

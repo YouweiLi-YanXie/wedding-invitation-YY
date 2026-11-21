@@ -9,20 +9,23 @@ const introVideo = document.getElementById('intro-video');
 const playIntro = document.getElementById('play-intro');
 const introPlayLabel = document.getElementById('intro-play-label');
 const introStatus = document.getElementById('intro-status');
+const introBuffering = document.getElementById('intro-buffering');
 let introFinished = false;
+let introPrepared = false;
 let introReady = false;
-let introController;
-let introObjectUrl;
-let introPreparation;
+function setIntroBuffering(active) {
+  introBuffering.hidden=!active;
+  filmIntro.classList.toggle('is-buffering',active);
+  setInvitationVideoPriority(active || (!introVideo.paused && !introFinished));
+}
 function finishIntro() {
   if (introFinished) return;
   introFinished=true;
-  introController?.abort();
   introVideo.pause();
   introVideo.controls=false;
   introVideo.removeAttribute('src');
   introVideo.load();
-  if (introObjectUrl) URL.revokeObjectURL(introObjectUrl);
+  setIntroBuffering(false);
   filmIntro.hidden=true;
   preloadInvitationMedia();
   document.getElementById('cover').hidden=false;
@@ -30,78 +33,67 @@ function finishIntro() {
   document.getElementById('open-letter').focus({preventScroll:true});
 }
 function prepareIntro() {
-  if (introReady) return Promise.resolve();
-  if (introPreparation) return introPreparation;
-  introPreparation = (async()=>{
-  introController=new AbortController();
-  let timer=setTimeout(()=>introController?.abort(),30000);
-  introPlayLabel.textContent='准备短片…';
-  introStatus.textContent='正在准备完整短片，也可以直接拆开邀请。';
-  try {
-    const response=await fetchSavedMedia(introVideo.dataset.src,{signal:introController.signal});
-    if (!response.ok) throw new Error('Video download failed');
-    const total=Number(response.headers.get('content-length'));
-    let blob;
-    if (response.body?.getReader) {
-      const reader=response.body.getReader(),parts=[];
-      let received=0;
-      for (;;) {
-        const {done,value}=await reader.read();
-        if (done) break;
-        clearTimeout(timer);
-        timer=setTimeout(()=>introController?.abort(),30000);
-        parts.push(value);received+=value.byteLength;
-        if (total) introPlayLabel.textContent='准备中 '+Math.min(100,Math.round(received/total*100))+'%';
-      }
-      blob=new Blob(parts,{type:'video/mp4'});
-    } else blob=await response.blob();
-    if (introFinished) return;
-    if (!blob.size) throw new Error('Empty video');
-    introObjectUrl=URL.createObjectURL(blob);
-    introVideo.src=introObjectUrl;
-    introVideo.load();
-    introReady=true;
-    preloadInvitationMedia();
-  } finally {
-    clearTimeout(timer);
-    introController=undefined;
-  }
-  })().finally(()=>{introPreparation=undefined;});
-  return introPreparation;
+  if (introPrepared || introFinished) return;
+  introPrepared=true;
+  introVideo.preload='auto';
+  introVideo.src=introVideo.dataset.src;
+  introVideo.load();
+  introStatus.textContent='短片载入中，轻触即可播放，也可直接拆开邀请。';
 }
 playIntro.addEventListener('click',async()=>{
   if (introFinished || playIntro.disabled) return;
   playIntro.disabled=true;
   stopMusic();
+  prepareIntro();
+  setIntroBuffering(!introReady);
+  introPlayLabel.textContent='载入中…';
   try {
-    if (!introReady) await prepareIntro();
-    if (introFinished || document.hidden) return;
     introVideo.controls=true;
+    // Keep play() inside the tap gesture; the fast-start MP4 streams without waiting for its end.
     await introVideo.play();
     if (introFinished || document.hidden) introVideo.pause();
   } catch {
     if (!introFinished) {
+      setIntroBuffering(false);
       playIntro.hidden=false;
       introPlayLabel.textContent=introReady?'轻触播放':'重试播放';
       introStatus.textContent=introReady?'短片已准备好，轻触开始播放。':'网络有些慢，可以重试或直接拆开邀请。';
     }
   } finally {playIntro.disabled=false;}
 });
+introVideo.addEventListener('loadeddata',()=>{
+  if (introFinished) return;
+  introReady=true;
+  if (introVideo.paused && !playIntro.disabled) {
+    introPlayLabel.textContent='轻触播放';
+    introStatus.textContent='轻触播放，把这份欢喜先讲给你听。';
+  }
+});
 introVideo.addEventListener('play',()=>{
   if (introFinished) {introVideo.pause();return;}
   stopMusic();playIntro.hidden=true;
+  setInvitationVideoPriority(true);
+});
+introVideo.addEventListener('playing',()=>{
+  if (introFinished) return;
+  setIntroBuffering(false);
   introStatus.textContent='把这份欢喜，先讲给你听。';
+});
+introVideo.addEventListener('waiting',()=>{
+  if (introFinished || introVideo.paused) return;
+  setIntroBuffering(true);
+  introStatus.textContent='正在缓冲，请稍候，也可以直接拆开邀请。';
 });
 introVideo.addEventListener('pause',()=>{
   if (introFinished || introVideo.ended) return;
+  setIntroBuffering(false);
   playIntro.hidden=false;introPlayLabel.textContent='继续播放';
   playIntro.setAttribute('aria-label','继续播放开场短片');
 });
 introVideo.addEventListener('error',()=>{
   if (introFinished) return;
-  introReady=false;
-  if (introObjectUrl) URL.revokeObjectURL(introObjectUrl);
-  introObjectUrl=undefined;
+  introReady=false;introPrepared=false;
+  setIntroBuffering(false);
   playIntro.hidden=false;introPlayLabel.textContent='重试播放';
   introStatus.textContent='短片暂时未能播放，可以重试或直接拆开邀请。';
 });
@@ -109,17 +101,4 @@ introVideo.addEventListener('error',()=>{
 introVideo.addEventListener('ended',finishIntro);
 document.getElementById('skip-intro').addEventListener('click',finishIntro);
 document.addEventListener('visibilitychange',()=>{if (document.hidden && !introFinished) introVideo.pause();});
-document.addEventListener('DOMContentLoaded',()=>{
-  if (introFinished) return;
-  prepareIntro().then(()=>{
-    if (!introFinished && introVideo.paused) {
-      introPlayLabel.textContent='轻触播放';
-      introStatus.textContent='短片已准备好，轻触开始播放。';
-    }
-  }).catch(()=>{
-    if (!introFinished) {
-      introPlayLabel.textContent='重试播放';
-      introStatus.textContent='网络有些慢，可以重试或直接拆开邀请。';
-    }
-  });
-});
+document.addEventListener('DOMContentLoaded',prepareIntro);

@@ -422,7 +422,6 @@ let photoTurning = false;
 let pendingPhotoTurn;
 let photoTurnTimer;
 let galleryScrollTop = 0;
-let nextPhotoPrefetch;
 let activeCollection;
 let activePhoto = 0;
 let lastAlbumButton;
@@ -484,7 +483,7 @@ function markAlbumViewed(button) {
   try { localStorage.setItem('wedding-gallery-seen',JSON.stringify(seenCollections)); } catch { /* Keep the current session usable. */ }
 }
 
-function renderPhotoCollection(direction = 0) {
+function renderPhotoCollection(direction = 0, retry = false) {
   const photos = activeCollection.photos;
   const photo = photos[activePhoto];
   const visibleSource = photoStage.classList.contains('is-photo-ready') ? photoImage.currentSrc || photoImage.src : pendingPhotoTurn?.source;
@@ -505,16 +504,15 @@ function renderPhotoCollection(direction = 0) {
   photoStage.setAttribute('aria-busy',photo ? 'true' : 'false');
   photoStage.classList.toggle('is-photo-loading',!!photo);
   photoStage.classList.remove('is-photo-ready');
-  nextPhotoPrefetch?.removeAttribute('src');
-  nextPhotoPrefetch = undefined;
   if (photo) {
     if (photo.preview) photoPreview.src = photo.preview;
     else photoPreview.removeAttribute('src');
-    photoImage.src = photo.src;
+    const source=photo.src+(retry ? (photo.src.includes('?')?'&':'?')+'retry='+Date.now() : '');
+    displayInvitationPhoto(photoImage,source);
     photoImage.alt = photo.alt || activeCollection.title+' · 第'+(activePhoto+1)+'张照片';
     photoStatus.textContent = '照片准备中…';
   } else {
-    photoImage.removeAttribute('src');
+    displayInvitationPhoto(photoImage);
     photoPreview.removeAttribute('src');
     photoImage.alt = '';
     photoStatus.textContent = '';
@@ -566,13 +564,8 @@ photoImage.addEventListener('load',() => {
     else finishPhotoTurn();
   }
   const next = activeCollection.photos.length > 1 ? activeCollection.photos[(activePhoto+1)%activeCollection.photos.length] : undefined;
-  // Only warm one adjacent photo after the visible photo finishes loading.
-  if (next && typeof Image !== 'undefined') {
-    nextPhotoPrefetch = new Image();
-    nextPhotoPrefetch.decoding = 'async';
-    nextPhotoPrefetch.fetchPriority = 'low';
-    nextPhotoPrefetch.src = next.src;
-  }
+  // Promote the next page in the shared queue instead of starting another image download.
+  if (next) prepareInvitationPhoto(next.src,'high').catch(()=>{});
 });
 photoImage.addEventListener('error',() => {
   if (!photoDialog.open) return;
@@ -584,8 +577,7 @@ photoImage.addEventListener('error',() => {
 });
 photoPreview.addEventListener('error',() => {photoPreview.hidden=true;});
 photoRetry.addEventListener('click',() => {
-  renderPhotoCollection();
-  photoImage.src += (photoImage.src.includes('?')?'&':'?')+'retry='+Date.now();
+  renderPhotoCollection(0,true);
 });
 function finishAlbumOpening() {
   albumOpening = false;
@@ -653,8 +645,7 @@ photoDialog.addEventListener('close',() => {
   finishAlbumOpening();
   finishPhotoTurn();
   photoTouch = undefined;
-  nextPhotoPrefetch?.removeAttribute('src');
-  nextPhotoPrefetch = undefined;
+  displayInvitationPhoto(photoImage);
   photoOutgoing.hidden = true;
   photoOutgoing.removeAttribute('src');
   photoStage.classList.remove('is-turning');
