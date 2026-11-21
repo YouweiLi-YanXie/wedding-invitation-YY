@@ -5,6 +5,7 @@ const photoCollections = [
     "id": "portraits",
     "title": "大婚肖像",
     "english": "THE PORTRAITS",
+    "date": "2027年01月30日",
     "group": "第一册",
     "description": "郑重定格，属于我们的模样。",
     "cover": "./assets/photos/portraits-cover.webp?v=ff13c4b56323",
@@ -189,13 +190,13 @@ const photoCollections = [
         "alt": "李有为与谢妍 · 大婚肖像 · 第30张",
         "caption": "以爱为名，与你共赴。"
       }
-    ],
-    "date": "2027年01月30日"
+    ]
   },
   {
     "id": "certificate",
     "title": "领证全记",
     "english": "OUR PROMISE",
+    "date": "2026年11月18日",
     "group": "第二册",
     "description": "从这一天起，我们有了共同的名字。",
     "cover": "./assets/photos/certificate-cover.webp?v=0b8f1bc9801c",
@@ -333,8 +334,8 @@ const photoCollections = [
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/certificate/certificate-17-mobile.webp?v=24d63a2004e8",
-        "preview": "./assets/photos/certificate/certificate-17-preview.webp?v=ad6089f20da3",
+        "src": "./assets/photos/certificate-7cc7726253a0-mobile.webp?v=9ccffb39401c",
+        "preview": "./assets/photos/certificate-7cc7726253a0-preview.webp?v=d76ab4af6b30",
         "alt": "李有为与谢妍 · 领证全记 · 第23张",
         "caption": "以爱为名，与你共赴。"
       },
@@ -392,8 +393,7 @@ const photoCollections = [
         "alt": "李有为与谢妍 · 领证全记 · 第32张",
         "caption": "以爱为名，与你共赴。"
       }
-    ],
-    "date": "2026年11月18日"
+    ]
   }
 ];
 
@@ -424,6 +424,7 @@ let photoTurnTimer;
 let galleryScrollTop = 0;
 let activeCollection;
 let activePhoto = 0;
+let returnedToFirstPage = false;
 let lastAlbumButton;
 const albumButtons = new Map();
 const albumCoupleNames = '李有为 & 谢妍';
@@ -546,7 +547,7 @@ photoImage.addEventListener('load',() => {
   photoStage.setAttribute('aria-busy','false');
   photoStage.classList.remove('is-photo-loading');
   photoStage.classList.add('is-photo-ready');
-  photoStatus.textContent = albumOpening ? '' : '左右轻扫，翻看照片';
+  photoStatus.textContent = albumOpening ? '' : (returnedToFirstPage ? '已经到第一页了' : '左右轻扫，翻看照片');
   photoRetry.hidden = true;
   if (pendingPhotoTurn) {
     const {direction,source} = pendingPhotoTurn;
@@ -598,6 +599,7 @@ function openPhotoCollection(id,button) {
   if (!collection || photoDialog.open) return;
   activeCollection = collection;
   activePhoto = 0;
+  returnedToFirstPage = false;
   lastAlbumButton = button;
   galleryScrollTop = window.scrollY || 0;
   renderPhotoCollection();
@@ -636,6 +638,7 @@ function moveCollectionPhoto(step) {
   const next = ((activePhoto+step)%count+count)%count;
   if (next === activePhoto) return;
   activePhoto = next;
+  returnedToFirstPage = next===0;
   renderPhotoCollection(step);
 }
 photoPrevious.addEventListener('click',() => moveCollectionPhoto(-1));
