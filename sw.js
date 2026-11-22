@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261122-2';
+const VERSION = '20261122-3';
 const ROOT = self.registration.scope;
 const SHELL_PREFIX = 'yy-shell:' + ROOT + ':';
 const SHELL_CACHE = SHELL_PREFIX + VERSION;
