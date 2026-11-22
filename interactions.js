@@ -116,8 +116,24 @@ document.getElementById('close-card').addEventListener('click',()=>guestDialog.c
 guestDialog.addEventListener('click',event=>{if(event.target===guestDialog)guestDialog.close();});
 
 const logoDialog = document.getElementById('logo-dialog');
+let logoScrollTop = 0;
+let lastLogoTrigger;
 document.querySelectorAll('[data-logo-preview]').forEach(button => {
-  button.addEventListener('click', () => logoDialog.showModal());
+  button.addEventListener('click', () => {
+    if (logoDialog.open) return;
+    lastLogoTrigger = button;
+    logoScrollTop = window.scrollY || 0;
+    document.body.style.top = '-'+logoScrollTop+'px';
+    document.body.classList.add('logo-dialog-open');
+    logoDialog.showModal();
+    document.getElementById('close-logo').focus({preventScroll:true});
+  });
 });
 document.getElementById('close-logo').addEventListener('click', () => logoDialog.close());
-logoDialog.addEventListener('click', event => { if (event.target === logoDialog) logoDialog.close(); });
+logoDialog.addEventListener('cancel',event => event.preventDefault());
+logoDialog.addEventListener('close',() => {
+  document.body.classList.remove('logo-dialog-open');
+  document.body.style.top = '';
+  window.scrollTo({top:logoScrollTop,behavior:'instant'});
+  lastLogoTrigger?.focus({preventScroll:true});
+});
