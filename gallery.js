@@ -8,186 +8,258 @@ const photoCollections = [
     "date": "2027年01月30日",
     "group": "第一册",
     "description": "郑重定格，属于我们的模样。",
-    "cover": "./assets/photos/portraits-cover.webp?v=ff13c4b56323",
+    "cover": "./assets/photos/portraits-cover.webp?v=1eac9767293b",
     "photos": [
       {
-        "src": "./assets/photos/castle-03-mobile.webp?v=db59f7ec2adf",
-        "preview": "./assets/photos/castle-03-preview.webp?v=3487ddf621c6",
+        "src": "./assets/photos/portraits-961431b1228d-mobile.webp?v=9ba4cb98c182",
+        "preview": "./assets/photos/portraits-961431b1228d-preview.webp?v=0171050b03c1",
         "alt": "李有为与谢妍 · 大婚肖像 · 第1张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-01-mobile.webp?v=fce59b35d728",
-        "preview": "./assets/photos/wedding-portrait-01-preview.webp?v=ad9cf29e7ead",
+        "src": "./assets/photos/portraits-69087e517203-mobile.webp?v=08a1fc7066bb",
+        "preview": "./assets/photos/portraits-69087e517203-preview.webp?v=0f010b0cd67f",
         "alt": "李有为与谢妍 · 大婚肖像 · 第2张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-01-mobile.webp?v=d88940df88d8",
-        "preview": "./assets/photos/garden-01-preview.webp?v=fb82b4332f46",
+        "src": "./assets/photos/portraits-42b030631f59-mobile.webp?v=d1e024d0dc14",
+        "preview": "./assets/photos/portraits-42b030631f59-preview.webp?v=e90fdab792f1",
         "alt": "李有为与谢妍 · 大婚肖像 · 第3张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-01-mobile.webp?v=10cabf0a3dc2",
-        "preview": "./assets/photos/oil-painting-01-preview.webp?v=a40362e0c96e",
+        "src": "./assets/photos/portraits-cb4e2f84653d-mobile.webp?v=e275a0067f79",
+        "preview": "./assets/photos/portraits-cb4e2f84653d-preview.webp?v=1af7bbab373d",
         "alt": "李有为与谢妍 · 大婚肖像 · 第4张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/castle-01-mobile.webp?v=045ccdf6e463",
-        "preview": "./assets/photos/castle-01-preview.webp?v=033c7dfb2bad",
+        "src": "./assets/photos/portraits-e8098a2e51ad-mobile.webp?v=1895998985f7",
+        "preview": "./assets/photos/portraits-e8098a2e51ad-preview.webp?v=6cf1f006e506",
         "alt": "李有为与谢妍 · 大婚肖像 · 第5张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/oil-painting-02-mobile.webp?v=a65e80082c44",
-        "preview": "./assets/photos/oil-painting-02-preview.webp?v=e4aba1a4c899",
+        "src": "./assets/photos/portraits-5b67e9f11f0c-mobile.webp?v=2cba1d8deceb",
+        "preview": "./assets/photos/portraits-5b67e9f11f0c-preview.webp?v=64fde289133c",
         "alt": "李有为与谢妍 · 大婚肖像 · 第6张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/castle-02-mobile.webp?v=1754eb5e396d",
-        "preview": "./assets/photos/castle-02-preview.webp?v=6bb35b904fdd",
+        "src": "./assets/photos/portraits-a762235f5103-mobile.webp?v=8369140d21c8",
+        "preview": "./assets/photos/portraits-a762235f5103-preview.webp?v=2d35f9a7ebd6",
         "alt": "李有为与谢妍 · 大婚肖像 · 第7张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-02-mobile.webp?v=ccf3ec3bfdd5",
-        "preview": "./assets/photos/wedding-portrait-02-preview.webp?v=49d36abe0ae5",
+        "src": "./assets/photos/portraits-48a6d275559d-mobile.webp?v=6de367e74183",
+        "preview": "./assets/photos/portraits-48a6d275559d-preview.webp?v=ce523bfa7d35",
         "alt": "李有为与谢妍 · 大婚肖像 · 第8张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-bf94d2692ef0-mobile.webp?v=f784802395df",
+        "preview": "./assets/photos/portraits-bf94d2692ef0-preview.webp?v=4f53a5ac7b9e",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第9张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-a228d729941d-mobile.webp?v=cd10a960f4b7",
+        "preview": "./assets/photos/portraits-a228d729941d-preview.webp?v=5e7c224db5b8",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第10张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-cb285ab1c75c-mobile.webp?v=eb20bfc5714d",
+        "preview": "./assets/photos/portraits-cb285ab1c75c-preview.webp?v=415890dde2bd",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第11张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-79802ace5bee-mobile.webp?v=9d736d8691a9",
+        "preview": "./assets/photos/portraits-79802ace5bee-preview.webp?v=c99b617d2e8a",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第12张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-133f7732a180-mobile.webp?v=29ebc9525489",
+        "preview": "./assets/photos/portraits-133f7732a180-preview.webp?v=3b5f188cc0a5",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第13张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-f0fbeba0f3b8-mobile.webp?v=966bbe32a491",
+        "preview": "./assets/photos/portraits-f0fbeba0f3b8-preview.webp?v=722912b20f46",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第14张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-5240270a33c6-mobile.webp?v=5722d64f6b08",
+        "preview": "./assets/photos/portraits-5240270a33c6-preview.webp?v=e34c7ad96903",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第15张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-ca28a971a7f0-mobile.webp?v=3300aa71e996",
+        "preview": "./assets/photos/portraits-ca28a971a7f0-preview.webp?v=107d3f269dae",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第16张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-f5838d3c22c0-mobile.webp?v=529b8e46374e",
+        "preview": "./assets/photos/portraits-f5838d3c22c0-preview.webp?v=b03ab2931776",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第17张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-3c87e67bae7b-mobile.webp?v=297480079ea2",
+        "preview": "./assets/photos/portraits-3c87e67bae7b-preview.webp?v=f9050aa52486",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第18张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/garden-02-mobile.webp?v=a368d57b8998",
         "preview": "./assets/photos/garden-02-preview.webp?v=bd19223b4907",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第9张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/oil-painting-03-mobile.webp?v=eb86153b8858",
-        "preview": "./assets/photos/oil-painting-03-preview.webp?v=11a34ccae623",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第10张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/garden-03-mobile.webp?v=4be1a70d2935",
-        "preview": "./assets/photos/garden-03-preview.webp?v=9a844e1af7e2",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第11张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/wedding-portrait-03-mobile.webp?v=d322af2f8574",
-        "preview": "./assets/photos/wedding-portrait-03-preview.webp?v=5eb69951a649",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第12张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/garden-04-mobile.webp?v=ccd623e077de",
-        "preview": "./assets/photos/garden-04-preview.webp?v=ff842f49e295",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第13张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/wedding-portrait-04-mobile.webp?v=09d9d620caff",
-        "preview": "./assets/photos/wedding-portrait-04-preview.webp?v=e77f30c94fb7",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第14张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/oil-painting-04-mobile.webp?v=f26bfb84ceac",
-        "preview": "./assets/photos/oil-painting-04-preview.webp?v=d47a4ed8dcad",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第15张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/oil-painting-05-mobile.webp?v=1fb75b045f3c",
-        "preview": "./assets/photos/oil-painting-05-preview.webp?v=d9c572685118",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第16张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/garden-05-mobile.webp?v=cd889e499e49",
-        "preview": "./assets/photos/garden-05-preview.webp?v=3257fcbd3860",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第17张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/oil-painting-06-mobile.webp?v=ad178740479d",
-        "preview": "./assets/photos/oil-painting-06-preview.webp?v=332b69de8567",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第18张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/garden-06-mobile.webp?v=d46869801fdd",
-        "preview": "./assets/photos/garden-06-preview.webp?v=650ec6c34ee4",
         "alt": "李有为与谢妍 · 大婚肖像 · 第19张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-05-mobile.webp?v=b39d9c7e0b1a",
-        "preview": "./assets/photos/wedding-portrait-05-preview.webp?v=542bc17d9fe6",
+        "src": "./assets/photos/portraits-91f0a4a341b2-mobile.webp?v=81f699b33c92",
+        "preview": "./assets/photos/portraits-91f0a4a341b2-preview.webp?v=6df036846fe8",
         "alt": "李有为与谢妍 · 大婚肖像 · 第20张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-06-mobile.webp?v=a27482fdfe67",
-        "preview": "./assets/photos/wedding-portrait-06-preview.webp?v=1d9172f5244b",
+        "src": "./assets/photos/portraits-8059ee334563-mobile.webp?v=e1d8645091dc",
+        "preview": "./assets/photos/portraits-8059ee334563-preview.webp?v=2021e6a32fb2",
         "alt": "李有为与谢妍 · 大婚肖像 · 第21张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-07-mobile.webp?v=afc6acb9fae5",
-        "preview": "./assets/photos/garden-07-preview.webp?v=5906e3396226",
+        "src": "./assets/photos/portraits-38c22eb379c0-mobile.webp?v=3c3f021da0dc",
+        "preview": "./assets/photos/portraits-38c22eb379c0-preview.webp?v=3a9f833c0738",
         "alt": "李有为与谢妍 · 大婚肖像 · 第22张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-07-mobile.webp?v=b7aad504c961",
-        "preview": "./assets/photos/wedding-portrait-07-preview.webp?v=395e60870311",
+        "src": "./assets/photos/portraits-50ad9ed42934-mobile.webp?v=172d897d34d8",
+        "preview": "./assets/photos/portraits-50ad9ed42934-preview.webp?v=fd377511bf2e",
         "alt": "李有为与谢妍 · 大婚肖像 · 第23张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/wedding-portrait-08-mobile.webp?v=c5d1a1c2bcd7",
-        "preview": "./assets/photos/wedding-portrait-08-preview.webp?v=c630dddf3b12",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第24张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/oil-painting-07-mobile.webp?v=42dfe7131f49",
-        "preview": "./assets/photos/oil-painting-07-preview.webp?v=1b4cdd68b5d8",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第25张",
-        "caption": "以爱为名，与你共赴。"
-      },
-      {
-        "src": "./assets/photos/oil-painting-08-mobile.webp?v=a587a11f88e6",
-        "preview": "./assets/photos/oil-painting-08-preview.webp?v=3436c1a8dbb6",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第26张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/garden-08-mobile.webp?v=0629b83d86d5",
         "preview": "./assets/photos/garden-08-preview.webp?v=6edcb0b3060a",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第24张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-3196242665d8-mobile.webp?v=e608d9b7f660",
+        "preview": "./assets/photos/portraits-3196242665d8-preview.webp?v=175bc24861a9",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第25张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-6c604d69b8e4-mobile.webp?v=d5b2ef7b93b9",
+        "preview": "./assets/photos/portraits-6c604d69b8e4-preview.webp?v=a31bf99c14a2",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第26张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-7305bea8806f-mobile.webp?v=3c4dc9ea885a",
+        "preview": "./assets/photos/portraits-7305bea8806f-preview.webp?v=9745c4110f94",
         "alt": "李有为与谢妍 · 大婚肖像 · 第27张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/wedding-portrait-09-mobile.webp?v=5f04a01e2a64",
-        "preview": "./assets/photos/wedding-portrait-09-preview.webp?v=ff8e16e053a9",
+        "src": "./assets/photos/portraits-86200b4a36f1-mobile.webp?v=65a74442d2b6",
+        "preview": "./assets/photos/portraits-86200b4a36f1-preview.webp?v=c7b5380d08f2",
         "alt": "李有为与谢妍 · 大婚肖像 · 第28张",
         "caption": "以爱为名，与你共赴。"
       },
       {
-        "src": "./assets/photos/garden-09-mobile.webp?v=92ef3f799a40",
-        "preview": "./assets/photos/garden-09-preview.webp?v=12beed57686c",
+        "src": "./assets/photos/portraits-ab7f75367f6d-mobile.webp?v=7a383d9496eb",
+        "preview": "./assets/photos/portraits-ab7f75367f6d-preview.webp?v=d3ee9b49379d",
         "alt": "李有为与谢妍 · 大婚肖像 · 第29张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-58cd9ced29cc-mobile.webp?v=8e1370c6c75e",
+        "preview": "./assets/photos/portraits-58cd9ced29cc-preview.webp?v=775ed2519335",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第30张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-8be6795bf21d-mobile.webp?v=4de65f2b1c2c",
+        "preview": "./assets/photos/portraits-8be6795bf21d-preview.webp?v=a247fa9c222e",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第31张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-19ccbb926074-mobile.webp?v=5d1511bc491e",
+        "preview": "./assets/photos/portraits-19ccbb926074-preview.webp?v=041e6656d82c",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第32张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/oil-painting-05-mobile.webp?v=1fb75b045f3c",
+        "preview": "./assets/photos/oil-painting-05-preview.webp?v=d9c572685118",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第33张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-0f5366c05d86-mobile.webp?v=2bf941bee025",
+        "preview": "./assets/photos/portraits-0f5366c05d86-preview.webp?v=fbaffe0c01d2",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第34张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-546dd832f094-mobile.webp?v=8fa5662db1c7",
+        "preview": "./assets/photos/portraits-546dd832f094-preview.webp?v=78500b7607e9",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第35张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-85d7623358df-mobile.webp?v=bfb479d4a557",
+        "preview": "./assets/photos/portraits-85d7623358df-preview.webp?v=f8f26e3023dc",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第36张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-7900000fd163-mobile.webp?v=ac9923e2e19d",
+        "preview": "./assets/photos/portraits-7900000fd163-preview.webp?v=6c83a33a85c9",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第37张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-b7460e653f30-mobile.webp?v=e638acdf72bb",
+        "preview": "./assets/photos/portraits-b7460e653f30-preview.webp?v=24e48f40c5c3",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第38张",
         "caption": "以爱为名，与你共赴。"
       },
       {
         "src": "./assets/photos/wedding-portrait-10-mobile.webp?v=a0e2563e149c",
         "preview": "./assets/photos/wedding-portrait-10-preview.webp?v=9980440b2d21",
-        "alt": "李有为与谢妍 · 大婚肖像 · 第30张",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第39张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-cca573908d91-mobile.webp?v=6272761b9581",
+        "preview": "./assets/photos/portraits-cca573908d91-preview.webp?v=3dcfeec3a150",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第40张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-273c49000e57-mobile.webp?v=5b264d7f9a2a",
+        "preview": "./assets/photos/portraits-273c49000e57-preview.webp?v=97b8ebe3b5c1",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第41张",
+        "caption": "以爱为名，与你共赴。"
+      },
+      {
+        "src": "./assets/photos/portraits-a3a8e87e6ab2-mobile.webp?v=1e3cc614ee7f",
+        "preview": "./assets/photos/portraits-a3a8e87e6ab2-preview.webp?v=f66556a72e70",
+        "alt": "李有为与谢妍 · 大婚肖像 · 第42张",
         "caption": "以爱为名，与你共赴。"
       }
     ]
