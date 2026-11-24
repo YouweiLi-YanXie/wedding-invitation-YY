@@ -662,6 +662,7 @@ function openPhotoCollection(id,button) {
   returnedToFirstPage = false;
   lastAlbumButton = button;
   galleryScrollTop = window.scrollY || 0;
+  setInvitationGalleryPriority(true);
   renderPhotoCollection();
   markAlbumViewed(button);
   button?.classList.add('is-opening');
@@ -705,6 +706,7 @@ photoPrevious.addEventListener('click',() => moveCollectionPhoto(-1));
 photoNext.addEventListener('click',() => moveCollectionPhoto(1));
 photoClose.addEventListener('click',() => photoDialog.close());
 photoDialog.addEventListener('close',() => {
+  setInvitationGalleryPriority(false);
   finishAlbumOpening();
   finishPhotoTurn();
   photoTouch = undefined;

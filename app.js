@@ -84,31 +84,18 @@ function prepareMusic() {
   if (musicReady) return Promise.resolve();
   if (musicPreparation) return musicPreparation;
   musicPreparation = (async()=>{
-  const controller=new AbortController();
-  let timer=setTimeout(()=>controller.abort(),30000);
-  if (musicTrack.paused) document.getElementById('music-label').textContent='音乐准备中';
+  // Reuse a complete saved track; native playback is the only network reader.
   try {
-    const response=await fetchSavedMedia(musicTrack.dataset.src,{signal:controller.signal});
-    if (!response.ok) throw new Error('Music download failed');
-    let blob;
-    if (response.body?.getReader) {
-      const reader=response.body.getReader(),parts=[];
-      const total=Number(response.headers.get('content-length'));
-      let received=0;
-      for (;;) {
-        const {done,value}=await reader.read();
-        if (done) break;
-        clearTimeout(timer);timer=setTimeout(()=>controller.abort(),30000);
-        parts.push(value);received+=value.byteLength;
-        if (total && musicTrack.paused) document.getElementById('music-label').textContent='音乐准备 '+Math.min(100,Math.round(received/total*100))+'%';
-      }
-      blob=new Blob(parts,{type:'audio/mp4'});
-    } else blob=await response.blob();
+    if (!window.caches) return;
+    const cache=await window.caches.open(invitationMediaCache);
+    const response=await cache.match(musicTrack.dataset.src);
+    if (!response || response.status!==200) return;
+    const blob=await response.blob();
     if (!blob.size) throw new Error('Empty music');
     musicObjectUrl=URL.createObjectURL(blob);
     musicReady=true;
     if (!musicWanted) updateMusicState(false);
-  } finally {clearTimeout(timer);}
+  } catch { /* An unavailable cache must not interrupt native streaming. */ }
   })().finally(()=>{musicPreparation=undefined;});
   return musicPreparation;
 }
@@ -148,6 +135,9 @@ document.getElementById('music').addEventListener('click',()=>{
   else startMusic();
 });
 musicTrack.addEventListener('playing',()=>{if(musicWanted)updateMusicState(true);});
+for (const type of ['waiting','stalled']) musicTrack.addEventListener(type,()=>{
+  if (musicWanted) document.getElementById('music-label').textContent='音乐准备中';
+});
 musicTrack.addEventListener('pause',()=>{
   if (musicWanted && !musicBusy && !document.hidden) {
     updateMusicState(false);

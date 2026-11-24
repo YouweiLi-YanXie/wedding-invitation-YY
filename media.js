@@ -20,8 +20,10 @@ const invitationPhotoQueue = [];
 const invitationPhotoRequests = new WeakMap();
 let invitationPhotoDownloads = 0;
 let invitationVideoPriority = false;
+let invitationGalleryPriority = false;
 function runInvitationPhotoQueue() {
   while (!invitationVideoPriority && invitationPhotoDownloads<2 && invitationPhotoQueue.length) {
+    if (invitationGalleryPriority && invitationPhotoQueue[0].priority!=='high') break;
     const job=invitationPhotoQueue.shift();
     job.started=true;
     invitationPhotoDownloads++;
@@ -39,6 +41,11 @@ function runInvitationPhotoQueue() {
 }
 function setInvitationVideoPriority(active) {
   invitationVideoPriority=active;
+  runInvitationPhotoQueue();
+}
+function setInvitationGalleryPriority(active) {
+  // Finish existing small requests, but reserve new slots for the viewed pages.
+  invitationGalleryPriority=active;
   runInvitationPhotoQueue();
 }
 function prepareInvitationPhoto(source,priority='low') {
