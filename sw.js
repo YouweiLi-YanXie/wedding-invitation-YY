@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261124-3';
+const VERSION = '20261125-1';
 const ROOT = self.registration.scope;
 const SHELL_PREFIX = 'yy-shell:' + ROOT + ':';
 const SHELL_CACHE = SHELL_PREFIX + VERSION;
@@ -28,11 +28,13 @@ self.addEventListener('activate',event => event.waitUntil((async()=>{
 self.addEventListener('fetch',event => {
   const request=event.request,url=new URL(request.url);
   if (request.method!=='GET' || !url.href.startsWith(ROOT)) return;
-  const media=/\/assets\/photos\/.*\.webp$/.test(url.pathname) || url.pathname.endsWith('/assets/video/wedding-prelude-mobile-lite.mp4') || url.pathname.endsWith('/assets/audio/a-thousand-years-mobile.m4a');
+  const music=/\/assets\/audio\/a-thousand-years-mobile(?:-light)?\.m4a$/.test(url.pathname);
+  const media=/\/assets\/photos\/.*\.webp$/.test(url.pathname) || url.pathname.endsWith('/assets/video/wedding-prelude-mobile-lite.mp4') || music;
   const page=request.mode==='navigate' && (url.pathname===new URL(ROOT).pathname || url.pathname===new URL('index.html',ROOT).pathname);
   const range=request.headers.get('range');
   if (range && !media) return;
   if (!media && !page && !/\.(?:css|js|svg|ttf|woff2|webp)$/.test(url.pathname)) return;
+  const network=()=>fetch(request,music?{priority:'low'}:undefined);
   event.respondWith((async()=>{
     const key=page?ROOT:request;
     let cache;
@@ -42,7 +44,7 @@ self.addEventListener('fetch',event => {
       if (saved) {
         if (!range) return saved;
         const match=/^bytes=(\d*)-(\d*)$/.exec(range);
-        if (!match || (!match[1] && !match[2])) return fetch(request);
+        if (!match || (!match[1] && !match[2])) return network();
         const blob=await saved.blob(),size=blob.size;
         const start=match[1]?Number(match[1]):Math.max(0,size-Number(match[2]));
         const end=match[1] && match[2]?Math.min(Number(match[2]),size-1):size-1;
@@ -53,8 +55,8 @@ self.addEventListener('fetch',event => {
         headers.set('Accept-Ranges','bytes');
         return new Response(blob.slice(start,end+1),{status:206,headers});
       }
-    } catch {return fetch(request);}
-    const response=await fetch(request);
+    } catch {return network();}
+    const response=await network();
     const fullRange=/^bytes 0-(\d+)\/(\d+)$/.exec(response.headers.get('Content-Range') || '');
     if (response.status===200 || (response.status===206 && fullRange && Number(fullRange[1])+1===Number(fullRange[2]))) {
       let copy=response.clone();
